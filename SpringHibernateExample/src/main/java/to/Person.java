@@ -10,7 +10,7 @@ import javax.persistence.Table;
 /**
  * Entity bean with JPA annotations
  * Hibernate provides JPA implementation
- * @author pankaj
+ * @author vijay
  *
  */
 @Entity

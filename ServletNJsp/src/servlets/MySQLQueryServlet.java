@@ -22,8 +22,8 @@ import maths.Calculator;
 /**
  * Servlet implementation class SimpleServlet
  */
-@WebServlet("/SimpleServlet")
-public class SimpleServlet extends HttpServlet {
+@WebServlet("/MySQLQueryServlet")
+public class MySQLQueryServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Connection connection = null;
 	private Statement statement = null;
@@ -33,7 +33,7 @@ public class SimpleServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public SimpleServlet() {
+	public MySQLQueryServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -65,6 +65,9 @@ public class SimpleServlet extends HttpServlet {
 		PrintWriter out = null;
 		try {
 			out = response.getWriter();
+			out.print("<font color=\"green\" size=\"+1\">Welcome to the simple sample for MySQL</font>");
+			out.print("<br/><font color=\"red\">If NO records are displayed, insert rows in the table</font>");
+			out.print("<br/>");
 			// String s1=request.getParameter("number_1");
 			// out.print("S1: "+s1);
 			// String s2=request.getParameter("number_2");
@@ -85,7 +88,7 @@ public class SimpleServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 			// Setup the connection with the DB
-			connection = DriverManager.getConnection("jdbc:mysql://localhost/test?user=vpanchat&password=p1kvijay");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost/test?user=vpanchat&password=p1kvijay&useSSL=false");
 			// Statements allow to issue SQL queries to the database
 			statement = connection.createStatement();
 			// Result set get the result of the SQL query

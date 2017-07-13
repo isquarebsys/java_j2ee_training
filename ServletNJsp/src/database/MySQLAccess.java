@@ -28,19 +28,19 @@ public class MySQLAccess {
             writeResultSet(resultSet);
 
             // PreparedStatements can use variables and are more efficient
-//            preparedStatement = connection
-//                    .prepareStatement("insert into  test.user values (?, ?, ?, ?)");
-//            // "myuser, webpage, datum, summary, COMMENTS from feedback.comments");
-//            // Parameters start with 1
-//            preparedStatement.setString(1, "Vijay");
-//            preparedStatement.setString(2, "TestEmail");
-//            preparedStatement.setString(3, "p1kvijay");
-//            preparedStatement.setTimestamp(4, new java.sql.Timestamp(System.currentTimeMillis()));
-//            preparedStatement.executeUpdate();
-            // Remove again the insert comment
-            preparedStatement = connection.prepareStatement("delete from test.user where username= ? ;");
+            preparedStatement = connection
+                    .prepareStatement("insert into  test.user values (?, ?, ?, ?)");
+            // "myuser, webpage, datum, summary, COMMENTS from feedback.comments");
+            // Parameters start with 1
             preparedStatement.setString(1, "Vijay");
+            preparedStatement.setString(2, "TestEmail");
+            preparedStatement.setString(3, "p1kvijay");
+            preparedStatement.setTimestamp(4, new java.sql.Timestamp(System.currentTimeMillis()));
             preparedStatement.executeUpdate();
+            // Remove again the insert comment
+//            preparedStatement = connection.prepareStatement("delete from test.user where username= ? ;");
+//            preparedStatement.setString(1, "Vijay");
+//            preparedStatement.executeUpdate();
             writeMetaData(resultSet);
             writeResultSet(resultSet);
         } catch (Exception e) {
