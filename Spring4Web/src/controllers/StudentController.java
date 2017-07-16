@@ -12,7 +12,6 @@ import to.Student;
 @Controller
 public class StudentController {
    @RequestMapping(value = "/add/student", method = RequestMethod.GET)
-   
    public ModelAndView student() {
       return new ModelAndView("add_student", "command", new Student());
    }
