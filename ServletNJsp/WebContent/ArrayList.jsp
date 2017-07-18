@@ -17,6 +17,7 @@
 		studentList.add("Kokila");
 		studentList.add("Surya");
 		studentList.add("Sanjana");
+		studentList.add("Ayyappan");
 		Iterator<String> studentIterator = studentList.iterator();
 		while (studentIterator.hasNext()) {
 			out.print("<tr><td>");
