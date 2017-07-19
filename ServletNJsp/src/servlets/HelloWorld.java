@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class HelloWorld
@@ -30,9 +31,11 @@ public class HelloWorld extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		PrintWriter out=response.getWriter();
-		
+		HttpSession session=request.getSession();
+		session.setAttribute("user_name", request.getParameter("first_name"));
 		out.println("<font color=\"blue\" size=\"+1\">Welcome "+request.getParameter("first_name")+"</font>");
-		out.append("Served at: ").append(request.getContextPath());
+//		out.append("Served at: ").append(request.getContextPath());
+		out.print("Name from session: "+session.getAttribute("user_name"));
 
 	}
 
