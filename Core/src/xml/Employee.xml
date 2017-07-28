@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<employee id="1">
 		<name>Vijay</name>
+		<id>1</id>
+		<age>40</age>
+		<type>Regular</type>
 	</employee>
