@@ -11,7 +11,6 @@ import java.lang.*;
 
 @Controller
 public class IndexHtmlController {
-	
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
     public String index(ModelMap model) {
         model.addAttribute("greeting", "index.html from Spring 4MVC");
