@@ -6,11 +6,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import java.util.*;
+import java.lang.*;
 
 @Controller
 public class IndexHtmlController {
 	
-    @RequestMapping("/index")
+	@RequestMapping(value = "/index", method = RequestMethod.GET)
     public String index(ModelMap model) {
         model.addAttribute("greeting", "index.html from Spring 4MVC");
         return "index";
