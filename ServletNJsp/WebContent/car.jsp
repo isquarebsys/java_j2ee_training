@@ -10,23 +10,24 @@
 </head>
 <body>
 	<%
-	out.print("<table border=\"3\">");
-	out.print("<tr><th>Car Name</th><th>brake type</th></tr>");
-	    HashMap carMap = new HashMap();
+		out.print("<table border=\"3\">");
+		out.print("<tr><th>Car Name</th><th>brake type</th></tr>");
+		HashMap carMap = new HashMap();
 		Car wagonR = new Car();
 		wagonR.setBrakeType("ECB");
 		Car altoVxi = new Car();
 		wagonR.setBrakeType("ABS");
+		Car xylo =new Car();
+	    xylo.setBrakeType("ABS");
 		carMap.put("AltoVxi", altoVxi);
 		carMap.put("WagonR", wagonR);
+		carMap.put("xylo", xylo);
 
-		Car mapInstance = (Car) carMap.get("WagonR");
-		
 		Iterator carsIterator = carMap.keySet().iterator();
 		while (carsIterator.hasNext()) {
-		out.print("<tr>");
+			out.print("<tr>");
 			String key = (String) carsIterator.next();
-		out.print("<td>");
+			out.print("<td>");
 			out.print(key);
 			out.print("</td>");
 			Car value = (Car) carMap.get(key);
