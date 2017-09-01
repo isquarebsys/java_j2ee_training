@@ -18,16 +18,16 @@
     </style>
 </head>
 <body>
-    <h2>AngularJS Sample Application</h2>
+    <h2>JSON Call to MessageServlet</h2>
     <div ng-app="" ng-controller="categoryController">
         <table>
             <tr>
-                <th>Category ID</th>
-                <th>Category Name</th>
+                <th>Message from [First Name]</th>
+                <th>Message from [Last Name]</th>
             </tr>
             <tr>
-                <td>{{ category.firstName }}</td>
-                <td>{{ category.lastName }}</td>
+                <td>{{ message.firstName }}</td>
+                <td>{{ message.lastName }}</td>
             </tr>
         </table>
     </div>
@@ -35,7 +35,7 @@
         function categoryController($scope, $http) {
         	  $http.get('/AngularJersey/REST/message').
         	    success(function(data, status, headers, config) {
-        	      $scope.category = data;
+        	      $scope.message = data;
         	      console.log("Json DATA: "+data);
         	    }).
         	    error(function(data, status, headers, config) {
