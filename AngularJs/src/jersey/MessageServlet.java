@@ -12,6 +12,8 @@ import java.util.logging.Logger;
 @Path("message")
 public class MessageServlet {
 	private final String TAG="HelloWorld";
+	
+	
 @GET
 @Produces({MediaType.APPLICATION_JSON})
    public Message getHello() {
