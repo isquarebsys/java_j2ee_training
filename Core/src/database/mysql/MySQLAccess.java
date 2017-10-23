@@ -38,8 +38,9 @@ public class MySQLAccess {
 //            preparedStatement.setTimestamp(4, new java.sql.Timestamp(System.currentTimeMillis()));
 //            preparedStatement.executeUpdate();
             // Remove again the insert comment
-            preparedStatement = connection.prepareStatement("delete from test.user where username= ? ;");
+            preparedStatement = connection.prepareStatement("delete from test.user where username= ? and email=?;");
             preparedStatement.setString(1, "Vijay");
+            preparedStatement.setString(2, "p6.vijayakumar@gmail.com");
             preparedStatement.executeUpdate();
             writeMetaData(resultSet);
             writeResultSet(resultSet);
@@ -70,13 +71,13 @@ public class MySQLAccess {
             // which starts at 1
             // e.g. resultSet.getSTring(2);
             String user = resultSet.getString("username");
-            String website = resultSet.getString("email");
-            String summary = resultSet.getString("password");
+            String email = resultSet.getString("email");
+            String password = resultSet.getString("password");
             Timestamp timestamp = resultSet.getTimestamp("create_time");
             System.out.println("User: " + user);
-            System.out.println("Website: " + website);
-            System.out.println("summary: " + summary);
-            System.out.println("timestamp" + timestamp);
+            System.out.println("Email: " + email);
+            System.out.println("Password: " + password);
+            System.out.println("Timestamp: " + timestamp);
         }
     }
 
