@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 
 @Path("message")
 public class MessageServlet {
-	private final String TAG="HelloWorld";
+	private final String TAG="MessageServlet";
 	
 	
 @GET

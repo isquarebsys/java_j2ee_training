@@ -34,7 +34,7 @@
 	</filter>
 	<filter-mapping>
 		<filter-name>CorsFilter</filter-name>
-		<url-pattern>/REST/*</url-pattern>
+		<url-pattern>/jersey/*</url-pattern>
 	</filter-mapping>
 	<servlet>
 		<servlet-name>jersey-servlet</servlet-name>
@@ -54,7 +54,7 @@
 
 	<servlet-mapping>
 		<servlet-name>jersey-servlet</servlet-name>
-		<url-pattern>/REST/*</url-pattern>
+		<url-pattern>/jersey/*</url-pattern>
 	</servlet-mapping>
 
 </web-app>

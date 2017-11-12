@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Angular JS Includes</title>
+    <style>
+        table, th, td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+            table tr:nth-child(odd) {
+                background-color: #f2f2f2;
+            }
+
+            table tr:nth-child(even) {
+                background-color: #ffffff;
+            }
+    </style>
+</head>
+<body>
+    <h2>JSON Call to MessageServlet</h2>
+    <div ng-app="" ng-controller="categoryController">
+        <table>
+            <tr>
+                <th>Message from [First Name]</th>
+                <th>Message from [Last Name]</th>
+            </tr>
+            <tr>
+                <td>{{ message.firstName }}</td>
+                <td>{{ message.lastName }}</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function categoryController($scope, $http) {
+        	  $http.get('/AngularJersey/jersey/message').
+        	    success(function(data, status, headers, config) {
+        	      $scope.message = data;
+        	      console.log("Json DATA: "+data);
+        	    }).
+        	    error(function(data, status, headers, config) {
+        	      alert("error");
+        	    });
+        	}
+    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+</body>
+</html> 
