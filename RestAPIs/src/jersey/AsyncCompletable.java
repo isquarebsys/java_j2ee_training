@@ -9,14 +9,16 @@ import org.glassfish.jersey.server.ManagedAsync;
 @Path("AsyncCompletable")
 public class AsyncCompletable {
 	private static final Logger log = Logger.getLogger("AsyncCompletable");
+
 	@GET
 	@ManagedAsync
-	public CompletableFuture<?> getValueAsync() {
+	public CompletableFuture<String> getValueAsync() {
 		log.info("Request received");
-		CompletableFuture<?> completableFuture = CompletableFuture.supplyAsync(this::processRequest);
+		CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(this::processRequest);
 		log.info("Servlet thread released");
 		return completableFuture;
 	}
+
 	private String processRequest() {
 		log.info("processRequest:start");
 		try {
