@@ -33,7 +33,7 @@
     </div>
     <script>
         function asyncServlet($scope, $http) {
-        	  $http.get('/AngularJersey/jersey/AsyncServletWithTimeOut').
+        	  $http.get('/rest/jersey/AsyncServletWithTimeOut').
         	    success(function(data, status, headers, config) {
         	      $scope.message = data;
         	      console.log("Json DATA: "+data);

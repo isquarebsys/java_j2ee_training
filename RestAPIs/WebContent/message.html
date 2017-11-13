@@ -33,7 +33,7 @@
     </div>
     <script>
         function categoryController($scope, $http) {
-        	  $http.get('/AngularJersey/jersey/message').
+        	  $http.get('/rest/jersey/message').
         	    success(function(data, status, headers, config) {
         	      $scope.message = data;
         	      console.log("Json DATA: "+data);

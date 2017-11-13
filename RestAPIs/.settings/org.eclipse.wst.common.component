@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="AngularJersey">
+    <wb-module deploy-name="rest">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/.apt_generated"/>
-        <property name="java-output-path" value="/AngularJersey/build/classes"/>
-        <property name="context-root" value="AngularJersey"/>
+        <property name="java-output-path" value="/rest/build/classes"/>
+        <property name="context-root" value="rest"/>
     </wb-module>
 </project-modules>

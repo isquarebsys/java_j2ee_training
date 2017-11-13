@@ -31,7 +31,7 @@
     </div>
     <script>
         function syncSingleThread($scope, $http) {
-        	  $http.get('/AngularJersey/jersey/SyncSingleThread').
+        	  $http.get('/rest/jersey/SyncSingleThread').
         	    success(function(data, status, headers, config) {
         	      $scope.message = data;
         	      console.log("Json DATA: "+data);
