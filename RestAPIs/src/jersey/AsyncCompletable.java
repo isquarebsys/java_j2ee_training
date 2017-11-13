@@ -25,10 +25,22 @@ public class AsyncCompletable {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				
+
 			}
 		});
 		log.info("Servlet thread released");
+		//Now handle the previously called completableFuture
+		CompletableFuture<String> handleResult = completableFuture.handle((ExecutedSuccessfully, ExecutedWithError) -> {
+			if (ExecutedSuccessfully != null) {
+				log.info("Processed Result is SUCCESS");
+				return "SUCCESS";
+			} else {
+				log.info("Problem");
+				log.info("Processed Result is FAILURE");
+				return "FAILURE";
+			}
+		});
+		log.info("Status is : "+handleResult.isDone());
 		return completableFuture;
 	}
 }
