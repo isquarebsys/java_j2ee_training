@@ -14,23 +14,24 @@ public class AsyncCompletable {
 	@ManagedAsync
 	public CompletableFuture<Void> getValueAsync() {
 		log.info("Request received");
-		CompletableFuture<Void> completableFuture = CompletableFuture.runAsync(new Runnable() {
-			@Override
-			public void run() {
-				// TODO Auto-generated method stub
-				try {
-					Thread.sleep(5000);
-					log.info("CompletableFuture running");
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-
-			}
-		});
+		CompletableFuture<Void> futureWithString = CompletableFuture.runAsync(this::processTest);
+//		CompletableFuture<Void> completableFuture = CompletableFuture.runAsync(new Runnable() {
+//			@Override
+//			public void run() {
+//				// TODO Auto-generated method stub
+//				try {
+//					Thread.sleep(5000);
+//					log.info("CompletableFuture running");
+//				} catch (InterruptedException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+//
+//			}
+//		});
 		log.info("Servlet thread released");
 		//Now handle the previously called completableFuture
-		CompletableFuture<String> handleResult = completableFuture.handle((ExecutedSuccessfully, ExecutedWithError) -> {
+		CompletableFuture<String> handleResult = futureWithString.handle((ExecutedSuccessfully, ExecutedWithError) -> {
 			if (ExecutedSuccessfully != null) {
 				log.info("Processed Result is SUCCESS");
 				return "SUCCESS";
@@ -41,6 +42,17 @@ public class AsyncCompletable {
 			}
 		});
 		log.info("Status is : "+handleResult.isDone());
-		return completableFuture;
+		return futureWithString;
+	}
+	
+	private String processTest() {
+		log.info("processTest:start");
+		try {
+			Thread.sleep(5000);
+		}catch(Exception e) {
+			
+		}		
+		log.info("processTest:end");
+		return "Thread returned";
 	}
 }
