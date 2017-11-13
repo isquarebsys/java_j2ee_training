@@ -12,21 +12,23 @@ public class AsyncCompletable {
 
 	@GET
 	@ManagedAsync
-	public CompletableFuture<String> getValueAsync() {
+	public CompletableFuture<Void> getValueAsync() {
 		log.info("Request received");
-		CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(this::processRequest);
+		CompletableFuture<Void> completableFuture = CompletableFuture.runAsync(new Runnable() {
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				try {
+					Thread.sleep(5000);
+					log.info("CompletableFuture running");
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			}
+		});
 		log.info("Servlet thread released");
 		return completableFuture;
-	}
-
-	private String processRequest() {
-		log.info("processRequest:start");
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		log.info("processRequest:end");
-		return "result from AsyncCompletable";
 	}
 }
