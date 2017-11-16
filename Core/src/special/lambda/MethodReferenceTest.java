@@ -90,12 +90,17 @@ public class MethodReferenceTest {
 		}
 		ComparisonProvider myComparisonProvider = new ComparisonProvider();
 		Arrays.sort(rosterAsArray, myComparisonProvider::compareByName);
+			
 
 		// Reference to an instance method
 		// of an arbitrary object of a particular type
 
 		String[] stringArray = { "Barbara", "James", "Mary", "John", "Patricia", "Robert", "Michael", "Linda" };
 		Arrays.sort(stringArray, String::compareToIgnoreCase);
+		System.out.println("Printing Sorted Names using METHOD REFERENCES");
+		for(int i=0;i<stringArray.length;i++) {
+			System.out.println("   "+stringArray[i]);
+		}		
 
 		Set<Person> rosterSetLambda = transferElements(roster, () -> {
 			return new HashSet<>();
@@ -103,7 +108,7 @@ public class MethodReferenceTest {
 
 		// new HashSet<>() is equal to HashSet::new
 		Set<Person> rosterSet = transferElements(roster, HashSet::new);
-		//System.out.println("Printing rosterSet:");
+		System.out.println("Printing rosterSet:");
 		rosterSet.stream().forEach(p -> p.printPerson());
 	}
 

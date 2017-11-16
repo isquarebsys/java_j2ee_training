@@ -44,7 +44,7 @@ public class Person {
 	}	
 	
 	  public void printPerson() {
-		  //System.out.println("printing person");
+		  System.out.println("Person: "+this.name);
 	  }
 	  
 	  public static List<Person> createRoster() {
