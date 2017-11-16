@@ -63,9 +63,14 @@ public class Java8DateAPIs {
 				DateTimeFormatter.ofPattern("d::MMM::uuuu HH::mm::ss"));
 		System.out.println("Default format after parsing = " + dt);
 
-		LocalDateTime thingsAlertTime = LocalDateTime.parse("2017-08-16T02:29:56Z",
-				DateTimeFormatter.ofPattern("yyyy-mm-dd'T'HH:mm:ss'Z'"));
-		System.out.println("ThingsAlert Time Issue: Default format after parsing = " + thingsAlertTime);	
+		try {
+			LocalDateTime thingsAlertTime = LocalDateTime.parse("2017-08-16T02:29:56Z",
+					DateTimeFormatter.ofPattern("yyyy-mm-dd'T'HH:mm:ss'Z'"));
+			System.out.println("ThingsAlert Time Issue: Default format after parsing = " + thingsAlertTime);				
+		}catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("Exception during ThingsAlert Time Issue: "+e.toString());
+		}
 	}
 
 	public static void apiUtils() {
@@ -126,5 +131,6 @@ public class Java8DateAPIs {
 		Period period = today1.until(lastDayOfYear);
 		System.out.println("Period Format= " + period);
 		System.out.println("Months remaining in the year= " + period.getMonths());
+		System.out.println("DAYS remaining in the year= " + period.getDays());
 	}
 }
