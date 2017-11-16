@@ -7,9 +7,13 @@ public class DaggerTest {
     BackendService backendService; // 
     private MyComponent component;
 
+    /**
+     * DaggerMyComponent is not being BUILT. To be fixed
+     */
     private DaggerTest() {
-        component = DaggerMyComponent.builder().build();
-        component.inject(this);
+    	
+//        component = DaggerMyComponent.builder().build();
+//        component.inject(this);
     }
 
     private void callServer() {
