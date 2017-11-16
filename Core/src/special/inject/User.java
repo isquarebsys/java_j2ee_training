@@ -1,4 +1,4 @@
-package features.special.inject;
+package special.inject;
 
 public class User {
     private String firstName;

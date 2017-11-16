@@ -44,20 +44,38 @@ public class MethodReferenceTest {
 
 		class PersonAgeComparator implements Comparator<Person> {
 			public int compare(Person a, Person b) {
+				int isDateEqual=a.getBirthday().compareTo(b.getBirthday());
+				System.out.println("   isDateEqual: "+isDateEqual);
 				return a.getBirthday().compareTo(b.getBirthday());
 			}
 		}
 
 		// Without method reference
 		Arrays.sort(rosterAsArray, new PersonAgeComparator());
+		System.out.println("Without method reference");
+		for(int i=0;i<rosterAsArray.length;i++) {
+			Person p=rosterAsArray[i];
+			System.out.println("   Person: "+p.getName());
+		}
 
 		// With lambda expression
 		Arrays.sort(rosterAsArray, (Person a, Person b) -> {
+			System.out.println("With lambda expression");
 			return a.getBirthday().compareTo(b.getBirthday());
 		});
+		for(int i=0;i<rosterAsArray.length;i++) {
+			Person p=rosterAsArray[i];
+			System.out.println("   Person: "+p.getName());
+		}
+		
 
 		// With method reference
-		Arrays.sort(rosterAsArray, Person::compareByAge);
+		Arrays.sort(rosterAsArray, Person::compareByName);
+		System.out.println("With method reference");
+		for(int i=0;i<rosterAsArray.length;i++) {
+			Person p=rosterAsArray[i];
+			System.out.println("   Person: "+p.getName());
+		}
 
 		// Reference to an instance method of a particular object
 		class ComparisonProvider {
@@ -65,6 +83,7 @@ public class MethodReferenceTest {
 				return a.getName().compareTo(b.getName());
 			}
 
+			@SuppressWarnings("unused")
 			public int compareByAge(Person a, Person b) {
 				return a.getBirthday().compareTo(b.getBirthday());
 			}
@@ -82,8 +101,9 @@ public class MethodReferenceTest {
 			return new HashSet<>();
 		});
 
+		// new HashSet<>() is equal to HashSet::new
 		Set<Person> rosterSet = transferElements(roster, HashSet::new);
-		System.out.println("Printing rosterSet:");
+		//System.out.println("Printing rosterSet:");
 		rosterSet.stream().forEach(p -> p.printPerson());
 	}
 

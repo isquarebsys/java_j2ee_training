@@ -1,4 +1,4 @@
-package features.special.inject;
+package special.inject;
 
 import javax.inject.Inject;
 

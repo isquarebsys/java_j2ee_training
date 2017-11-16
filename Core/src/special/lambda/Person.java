@@ -1,6 +1,7 @@
 package special.lambda;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +20,10 @@ public class Person {
 	}
 
 	LocalDate birthday;
+	public void setBirthday(LocalDate birthday) {
+		this.birthday = birthday;
+	}
+
 	Sex gender;
 	String emailAddress;
 
@@ -34,15 +39,26 @@ public class Person {
 		return a.birthday.compareTo(b.birthday);
 	}
 	
+	public static int compareByName(Person a, Person b) {
+		return b.name.compareTo(a.name);
+	}	
+	
 	  public void printPerson() {
-	        // ...
-	    }
+		  //System.out.println("printing person");
+	  }
 	  
 	  public static List<Person> createRoster() {
 		  ArrayList<Person> list=new ArrayList();
-		  Person person=new Person();
-		  person.setName("Vijay");
-		  list.add(person);
+		  Person person1=new Person();
+		  person1.setName("Vijay");
+		  LocalDate person1Date=LocalDate.now();
+		  person1.setBirthday(person1Date);
+		  list.add(person1);
+		  Person person2=new Person();
+		  LocalDate person2Date=LocalDate.of(2014, Month.DECEMBER, 17);
+		  person2.setName("Ajay");
+		  person2.setBirthday(person2Date);
+		  list.add(person2);
 		  return list;
 	  }
 }

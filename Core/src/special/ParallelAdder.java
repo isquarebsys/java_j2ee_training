@@ -1,4 +1,4 @@
-package features.special;
+package special;
 
 import java.util.ArrayList;
 import java.util.List;

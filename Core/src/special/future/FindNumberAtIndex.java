@@ -1,4 +1,4 @@
-package features.special.future;
+package special.future;
 
 import java.util.ArrayList;
 import java.util.Arrays;
