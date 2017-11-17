@@ -14,21 +14,26 @@ import to.Person;
 
 @Controller
 public class PersonController {
-	private PersonDAO personDao=new PersonDAOImpl();
+	private PersonDAO personDao;
  
     @RequestMapping("/person/list")
     public ModelAndView handleRequest() throws Exception {
+    	personDao=new PersonDAOImpl();
         List<Person> listUsers = personDao.list();
         ModelAndView model = new ModelAndView("PersonList");
         model.addObject("personList", listUsers);
         return model;
     }
      
-    @RequestMapping(value = "/person/new", method = RequestMethod.GET)
-    public ModelAndView newUser() {
-        ModelAndView model = new ModelAndView("UserForm");
+    @RequestMapping(value = "/person/add", method = RequestMethod.GET)
+    public String newUser() {
+    	personDao=new PersonDAOImpl();
+    	Person person=new Person();
+    	person.setName("Vijay");
+    	personDao.save(person);
+        ModelAndView model = new ModelAndView("index");
         model.addObject("person", new Person());
-        return model;      
+        return "index";      
     }
      
 //    @RequestMapping(value = "/edit", method = RequestMethod.GET)
