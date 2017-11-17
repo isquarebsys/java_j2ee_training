@@ -16,11 +16,17 @@
 			<th>Reference</th>
 		</tr>
 		<tr>
-			<td><a href="/Spring4Web/add/student">/Spring4Web/add/student</a></td>
-			<td>Jersey serialising a POJO to JSON</td>
+			<td><a href="/Spring4Web/student/add">/Spring4Web/add/student</a></td>
+			<td>Spring adds a new Student objects and maps to add_student.jsp</td>
 			<td style="color:red">Do NOT call the JSP directly like jsp/add_student.jsp</td>
 			<td><a href="">tbd</a></td>
 		</tr>
+		<tr>
+			<td><a href="/Spring4Web/person/add">/Spring4Web/person/add</a></td>
+			<td>Spring Hibernate: Add an entry in person table</td>
+			<td style="color:black"></td>
+			<td><a href=""></a></td>
+		</tr>		
 	</table>
 </body>
 </html>

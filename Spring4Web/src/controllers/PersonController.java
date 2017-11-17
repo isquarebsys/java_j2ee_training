@@ -2,14 +2,16 @@ package controllers;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.context.support.WebApplicationContextUtils;
 import org.springframework.web.servlet.ModelAndView;
 
 import dao.PersonDAO;
-import dao.PersonDAOImpl;
 import to.Person;
 
 @Controller
@@ -17,8 +19,9 @@ public class PersonController {
 	private PersonDAO personDao;
  
     @RequestMapping("/person/list")
-    public ModelAndView handleRequest() throws Exception {
-    	personDao=new PersonDAOImpl();
+    public ModelAndView handleRequest(HttpSession session)  throws Exception {
+    	ApplicationContext applicationContext = WebApplicationContextUtils.getRequiredWebApplicationContext(session.getServletContext());
+    	personDao=applicationContext.getBean(PersonDAO.class);
         List<Person> listUsers = personDao.list();
         ModelAndView model = new ModelAndView("PersonList");
         model.addObject("personList", listUsers);
@@ -26,10 +29,12 @@ public class PersonController {
     }
      
     @RequestMapping(value = "/person/add", method = RequestMethod.GET)
-    public String newUser() {
-    	personDao=new PersonDAOImpl();
+    public String newUser(HttpSession session) {
+    	ApplicationContext applicationContext = WebApplicationContextUtils.getRequiredWebApplicationContext(session.getServletContext());
+    	personDao=applicationContext.getBean(PersonDAO.class);
     	Person person=new Person();
     	person.setName("Vijay");
+    	person.setCountry("India");
     	personDao.save(person);
         ModelAndView model = new ModelAndView("index");
         model.addObject("person", new Person());

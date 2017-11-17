@@ -3,7 +3,7 @@
    <head><title>Spring MVC Form Handling</title></head>
    <body>
       <h2>Student Information</h2>
-      <form:form method = "POST" action = "/Spring4Web/add/result">
+      <form:form method = "POST" action = "/Spring4Web/student/added">
          <table>
             <tr>
                <td><form:label path = "name">Name</form:label></td>

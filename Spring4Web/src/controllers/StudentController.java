@@ -10,12 +10,12 @@ import to.Student;
 
 @Controller
 public class StudentController {
-   @RequestMapping(value = "/add/student", method = RequestMethod.GET)
+   @RequestMapping(value = "/student/add", method = RequestMethod.GET)
    public ModelAndView student() {
       return new ModelAndView("add_student", "command", new Student());
    }
    
-   @RequestMapping(value = "/add/result", method = RequestMethod.POST)
+   @RequestMapping(value = "/student/added", method = RequestMethod.POST)
       public String addStudent(@ModelAttribute("student")Student student,ModelMap model) {
       model.addAttribute("name", student.getName());
       model.addAttribute("age", student.getAge());
