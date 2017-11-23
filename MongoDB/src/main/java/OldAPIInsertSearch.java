@@ -7,7 +7,7 @@ import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.MongoClient;
 
-public class SimpleTest {
+public class OldAPIInsertSearch {
 
 	public static void main(String[] args) {
 		try {
@@ -31,10 +31,11 @@ public class SimpleTest {
 			searchQuery.put("name", "vijay");
 
 			DBCursor cursor = table.find(searchQuery);
+			
 			while (cursor.hasNext()) {
 				System.out.println(cursor.next());
 			}
-		} catch (UnknownHostException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
