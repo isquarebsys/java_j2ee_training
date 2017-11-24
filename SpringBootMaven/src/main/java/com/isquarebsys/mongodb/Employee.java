@@ -1,7 +1,6 @@
 package com.isquarebsys.mongodb;
 import org.springframework.data.annotation.Id;
-
-public class Person {
+public class Employee {
 	@Id
 	private String id;
 	private String firstName;
