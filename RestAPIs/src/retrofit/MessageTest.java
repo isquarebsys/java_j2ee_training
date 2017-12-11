@@ -1,5 +1,7 @@
 package retrofit;
 
+import java.io.IOException;
+
 import jersey.Message;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -23,6 +25,13 @@ public class MessageTest {
 			    .build();
 			MessageService service = retrofit.create(MessageService.class);
 			Call<Message> call=service.getMessage();
+			try {
+				Message message=call.execute().body();
+				System.out.println("firstName: "+message.getFirstName());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			//				System.out.println("call output: "+call.execute());
 			call.enqueue(new Callback<Message>() {
 				
@@ -45,7 +54,7 @@ public class MessageTest {
 					// TODO Auto-generated method stub
 //					System.out.println("Is call executed: "+arg0.isExecuted());
 //					System.out.println("Is call cancelle: "+arg0.isCanceled());
-					System.out.println("Error response message: "+arg1.getMessage());
+					System.out.println("Error response message: "+arg0.toString());
 				}
 			});
 	}

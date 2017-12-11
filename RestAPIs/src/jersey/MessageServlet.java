@@ -12,18 +12,19 @@ import java.util.logging.Logger;
 @Path("message")
 public class MessageServlet {
 	private final String TAG="MessageServlet";
+	Logger logger=Logger.getLogger(TAG);
 	
 	
 @GET
 @Produces({MediaType.APPLICATION_JSON})
    public Message getHello() {
-	Logger.getLogger(TAG).log(Level.INFO, "getHello:Start");
+	logger.log(Level.INFO, "getHello:Start");
 	Message m = new Message();
     m.setDate(new Date());
     m.setFirstName("Vijay");
     m.setLastName("P");
     m.setText("Hello World!");
-    Logger.getLogger(TAG).log(Level.INFO, "getHello:End");
+    logger.log(Level.INFO, "getHello:End");
     return m;
    }
 }
