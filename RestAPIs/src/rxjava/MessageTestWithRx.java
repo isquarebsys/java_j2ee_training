@@ -3,9 +3,6 @@ package rxjava;
 import jersey.Message;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -33,7 +30,7 @@ public class MessageTestWithRx {
 			Observable<Message> call=service.getMessage();
 			try {
 				Observable<Message> message=call.asObservable();
-				System.out.println("firstName: "+message.distinct());
+				System.out.println("firstName: "+message.map(Message::getFirstName).toString());
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
