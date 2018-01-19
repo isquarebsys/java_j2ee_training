@@ -8,14 +8,10 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import to.Address;
-import to.Person;
 import to.StudentAddress;
-import to.UserWithSingleAddress;
 import to.StudentWithMultipleAddress;
 
 public class StudentMultipleAddressTest {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//creating configuration object
@@ -43,7 +39,5 @@ public class StudentMultipleAddressTest {
 		t.commit();//transaction is commited
 		session.close();
 		System.out.println("successfully saved");		
-
 	}
-
 }
