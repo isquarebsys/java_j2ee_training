@@ -7,12 +7,25 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.NamedQueries;
+import org.hibernate.annotations.NamedQuery;
+
 /**
  * Entity bean with JPA annotations Hibernate provides JPA implementation
  * 
  * @author vijay
  *
  */
+
+@NamedQueries(  
+	    {  
+	        @NamedQuery(  
+	        name = "findAddressByCity",  
+	        query = "from StudentAddress s where s.city = :city"  
+	        )  
+	    }  
+	)  
+
 @Entity
 @Table(name = "student_address")
 public class StudentAddress {

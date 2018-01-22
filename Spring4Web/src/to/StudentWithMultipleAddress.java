@@ -34,7 +34,10 @@ public class StudentWithMultipleAddress {
 	@Column
     @OneToMany(targetEntity=StudentAddress.class)
 	private List<StudentAddress> addresses;
-
+	
+	public StudentWithMultipleAddress() {
+		
+	}
 	public StudentWithMultipleAddress(String name, List<StudentAddress> addresses) {
 		this.name = name;
 		this.addresses = addresses;

@@ -1,4 +1,4 @@
-package hibernate;
+package hibernate.hql;
 
 import java.util.List;
 
@@ -8,9 +8,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import to.StudentAddress;
-import to.UserWithSingleAddress;
 
-public class UserSingleAddressQueryTest {
+public class StreetQueryTest {
 	public static void main(String[] args) {
 		// creating configuration object
 		Configuration cfg = new Configuration();
@@ -20,13 +19,13 @@ public class UserSingleAddressQueryTest {
 		SessionFactory factory = cfg.buildSessionFactory();
 		// creating session object
 		Session session = factory.openSession();
-		String hql = "from UserWithSingleAddress";
+		String hql = "from StudentAddress";
 		Query query = session.createQuery(hql);
-		List<UserWithSingleAddress> objectList = query.list();
+		List<StudentAddress> objectList = query.list();
 		 
-		for (UserWithSingleAddress object : objectList) {
-		    System.out.println("Name: "+ object.getName());
-		    System.out.println("Country: "+ object.getCountry());
+		for (StudentAddress object : objectList) {
+		    System.out.println("Street Address: "+ object.getStreetAddress());
+		    System.out.println("City: "+ object.getCity());
 		}
 		session.close();
 	}
