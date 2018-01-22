@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<jsp:include page="nav.jsp" />
+<jsp:include page="../../nav.jsp" />
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -15,13 +15,9 @@
 			data-target="#functions_covered">Functions Covered</button>
 		<div id="functions_covered" class="collapse">
 			<div class="page-header">
-				<h1>Java Functions</h1>
+				<h1>Bootstrap</h1>
 				<div class="well">
-					<li>HashMap and iterating KeySet
-				</div>
-				<h1>JSP Functions</h1>
-				<div class="well">
-					<li>Iterate HashMap and usage of out.print
+					<li>Scroll horizontally on small devices (under 768px)
 				</div>
 			</div>
 		</div>

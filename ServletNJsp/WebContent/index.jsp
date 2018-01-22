@@ -1,10 +1,13 @@
 <!DOCTYPE html>
+<jsp:include page="nav.jsp" />
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Index.JSP</h1>
+	<div class="page-header">
+		<h1>Welcome to Server Programming in Java</h1>
+	</div>
 </body>
 </html>
