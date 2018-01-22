@@ -11,7 +11,7 @@ import org.hibernate.cfg.Configuration;
 import to.StudentAddress;
 import to.StudentWithMultipleAddress;
 
-public class StudentMultipleAddressTest {
+public class StudentMultipleAddressInsertTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//creating configuration object

@@ -35,6 +35,10 @@ public class UserWithSingleAddress {
     @OneToOne(targetEntity=UserAddress.class)
 	private UserAddress address;
 
+    public UserWithSingleAddress() {
+    	
+    }
+  
 	public UserWithSingleAddress(String name, UserAddress address) {
 		this.name = name;
 		this.address = address;

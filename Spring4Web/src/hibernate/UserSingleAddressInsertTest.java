@@ -8,7 +8,7 @@ import org.hibernate.cfg.Configuration;
 import to.UserAddress;
 import to.UserWithSingleAddress;
 
-public class UserSingleAddressTest {
+public class UserSingleAddressInsertTest {
 	public static void main(String[] args) {
 		// creating configuration object
 		Configuration cfg = new Configuration();
