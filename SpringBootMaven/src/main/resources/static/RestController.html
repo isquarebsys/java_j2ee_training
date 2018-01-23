@@ -15,14 +15,19 @@
 		w3.includeHTML();
 	</script>
 	<div class="container">
-		<div class="well">
-			<li>Add a class called JerseyConfig
-			<li>Add a class to represent Jersey Endpoint
-				[JerseyEndpointSample.java]
-			<li>Register a ServletRegistrationBean in *Application
-				[DemoApplication.java]
-				<br/>This registers JERSEY servlet for the path /jersey/*
-			<li>Access the Jersey Endpoint by calling <a href="http://localhost:8080/jersey/hello" target="_blank">Check the Endpoint</a>
+			<div class="page-header">
+				<h1>RestController produces JSON</h1>
+				<div class="well">
+					<li>Create a class EmployeeController. Use the annotation @RestController
+						<br/>Simply return the Java object
+					<li>Create a Controller [UserController]
+					<li>Access the Demo
+						<br/><a href="/employees">List Employee Sample</a>
+				</div>
+				
+		<!--<button type="button" class="btn btn-info" data-toggle="collapse"
+			data-target="#steps">Steps</button>
+		 <div id="steps" class="collapse"></div>-->
 		</div>
 	</div>
 </body>

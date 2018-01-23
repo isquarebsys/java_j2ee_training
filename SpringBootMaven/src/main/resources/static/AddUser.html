@@ -14,16 +14,24 @@
 	<script>
 		w3.includeHTML();
 	</script>
-	<div class="container">
-		<div class="well">
-			<li>Add a class called JerseyConfig
-			<li>Add a class to represent Jersey Endpoint
-				[JerseyEndpointSample.java]
-			<li>Register a ServletRegistrationBean in *Application
-				[DemoApplication.java]
-				<br/>This registers JERSEY servlet for the path /jersey/*
-			<li>Access the Jersey Endpoint by calling <a href="http://localhost:8080/jersey/hello" target="_blank">Check the Endpoint</a>
+	<div class="jumbotron">
+			<h1>Student Information</h1>
+
+			<form method="POST" action="/users/add">
+				<table>
+					<tr>
+						<td><label path="name">Name</label></td>
+						<td><input type="text" name="name" /></td>
+					</tr>
+					<tr>
+						<td><label path="email">Email</label></td>
+						<td><input type="text" name="email" /></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="submit" value="Submit" /></td>
+					</tr>
+				</table>
+			</form>
 		</div>
-	</div>
 </body>
 </html>
