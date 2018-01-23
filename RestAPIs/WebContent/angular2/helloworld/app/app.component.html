@@ -1,0 +1,81 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="//unpkg.com/zone.js@0.6.12/dist/zone.js"></script>
+    <script src="//unpkg.com/reflect-metadata@0.1.3/Reflect.js"></script>
+    <script src="//unpkg.com/systemjs@0.19.31/dist/system.js"></script>
+    <script src="//unpkg.com/typescript@1.8.10/lib/typescript.js"></script>
+    <script>
+    System.config({
+      transpiler: 'typescript',
+      typescriptOptions: {
+        emitDecoratorMetadata: true
+      },
+      paths: {
+        'npm:': 'https://unpkg.com/'
+      },
+      map: {
+        'app': './src',
+        '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
+        '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
+        '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
+        '@angular/platform-browser': 'npm:@angular/platform-browser/bundles/platform-browser.umd.js',
+        '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
+        '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
+        '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
+        '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
+        '@angular/core/testing': 'npm:@angular/core/bundles/core-testing.umd.js',
+        '@angular/common/testing': 'npm:@angular/common/bundles/common-testing.umd.js',
+        '@angular/compiler/testing': 'npm:@angular/compiler/bundles/compiler-testing.umd.js',
+        '@angular/platform-browser/testing': 'npm:@angular/platform-browser/bundles/platform-browser-testing.umd.js',
+        '@angular/platform-browser-dynamic/testing': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic-testing.umd.js',
+        '@angular/http/testing': 'npm:@angular/http/bundles/http-testing.umd.js',
+        '@angular/router/testing': 'npm:@angular/router/bundles/router-testing.umd.js',
+        'rxjs': 'npm:rxjs'
+      },
+      packages: {
+        app: {
+          main: './main.ts',
+          defaultExtension: 'ts'
+        },
+        rxjs: {
+          defaultExtension: 'js'
+        }
+      }
+    });
+    System
+      .import('app')
+      .catch(console.error.bind(console));
+    </script>	  
+	</head>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<div w3-include-html="../../../index.html"></div>
+<body>
+	<script>
+		w3.includeHTML();
+	</script>
+<div style="text-align:center">
+  <h1>
+    {{ title }}
+  </h1>
+  
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+	
+	<h3>Heroes list</h3>
+  <ul>
+    <li *ngFor="let hero of heroes">
+      {{ hero.name }}
+      </li>
+  </ul>
+  <p *ngIf="heroes.length > 0">There are {{heroes.length}} heroes!</p>
+  
+  <h1>Result from JSON Call</h1>
+  <li>Country Name: {{results}}
+</body>
+</html>

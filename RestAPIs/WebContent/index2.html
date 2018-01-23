@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <body>
+    <div ng-app="">
+      <p>Name: <input type="text" ng-model="name"></p>
+      <p ng-bind="name"></p>
+    </div>
+    <table border="1" width="100%">
+    	<tr>
+    		<th>File</th>
+    		<th>Description</th>
+    		<th>Notes</th>
+    		<th>Reference</th>
+    	</tr>
+    	<tr style="background-color:orange;" >
+    		<td colspan="4" align="center"><h1>Angular JS</h1></td>
+    	</tr>
+    	<tr>
+    		<td><a href="http://localhost:8080/rest/angular/forms/form_reset_example.html">Forms->Reset</a></td>
+    		<td>Reset Example</td>
+    		<td style="color:black">Resets form elements</td>
+    		<td><a href="https://www.w3schools.com/angular/tryit.asp?filename=try_ng_form">w3schools</a></td>
+    	</tr>     	
+    	<tr>
+    		<td><a href="http://localhost:8080/rest/angular/scope/color_example.html">Scope</a></td>
+    		<td>Colour Example</td>
+    		<td style="color:black">Explains rootScope and scope</td>
+    		<td><a href="https://www.w3schools.com/angular/angular_scopes.asp">w3schools</a></td>
+    	</tr>   
+    	<tr>
+    		<td><a href="http://localhost:8080/rest/angular/services/location_example.html">Services->Location</a></td>
+    		<td>Location Example</td>
+    		<td style="color:black">Location refers a location of a webpage</td>
+    		<td><a href="https://www.w3schools.com/angular/angular_services.asp">w3schools</a></td>
+    	</tr>  
+    	<tr>
+    		<td><a href="http://localhost:8080/rest/angular/services/http_example.html">Services->Http Service</a></td>
+    		<td>Http Example</td>
+    		<td style="color:black">Http services  makes a request to the server, and lets your application handle the response</td>
+    		<td><a href="https://www.w3schools.com/angular/angular_services.asp">w3schools</a></td>
+    	</tr>    	  	 	
+    	<tr>
+    		<td><a href="http://localhost:8080/rest/angular/controllers/todo.html">Controllers</a></td>
+    		<td>Controller Example</td>
+    		<td style="color:black"></td>
+    		<td><a href="">tbd</a></td>
+    	</tr>
+    	<tr>
+    		<td><a href="http://localhost:8080/rest/angular/controllers/2_way_sync.html">Controllers->2 Way Sync with Model</a></td>
+    		<td>2 Way Sync between View and Controller</td>
+    		<td style="color:black">Changes in Controller is reflected to View</td>
+    		<td><a href="https://www.w3schools.com/angular/angular_databinding.asp">w3schools</a></td>
+    	</tr>    	
+    	<tr>
+    		<td><a href="http://localhost:8080/rest/angular/routers/simple_routing.html">Routers</a></td>
+    		<td>Router Example</td>
+    		<td style="color:black"></td>
+    		<td><a href="">tbd</a></td>
+    	</tr>
+    	<tr>
+    		<td><a href="http://localhost:8080/rest/angular/filters/name_filter.html">Filters</a></td>
+    		<td>Filter Example</td>
+    		<td style="color:black">Filter names based on the user input</td>
+    		<td><a href="https://www.w3schools.com/angular/angular_filters.asp">w3schools</a></td>
+    	</tr>    	    
+    	<tr>
+    		<td><a href="http://localhost:8080/rest/angular/routers/routing_with_controller_1.html">Routing with Controllers</a></td>
+    		<td>Router with Controller Example</td>
+    		<td style="color:black"></td>
+    		<td><a href="">tbd</a></td>
+    	</tr>    
+    	<tr style="background-color:orange;" >
+    		<td colspan="4" align="center"><h1>General Asynchronous Processing</h1></td>
+    	</tr>    	   	
+    	<tr>
+    		<td><a href="message.html">Message</a></td>
+    		<td>Jersey serialising a POJO to JSON</td>
+    		<td style="color:black"></td>
+    		<td><a href="">tbd</a></td>
+    	</tr>
+    	<tr>
+    		<td><a href="SyncSingleThread.html">SyncSingleThread</a></td>
+    		<td>Synchronous servlet serving single thread for every request</td>
+    		<td style="color:red">Consumes more memory</td>
+    		<td><a href="https://nickebbitt.github.io/blog/2017/03/22/async-web-service-using-completable-future">nickebbitt.github.io</a></td>
+    	</tr>
+    	<tr>
+    		<td><a href="AsyncServletCall.html">AsyncServletWithTimeOut</a></td>
+    		<td>Asynchronous servlet with Time Out functions</td>
+    		<td style="color:blue">Time Out Functions</td>
+    		<td><a href=""></a></td>
+    	</tr>
+    	<tr>
+    		<td><a href="AsyncCompletable.html">AsyncCompletable</a></td>
+    		<td>Asynchronous servlet makes thread available and uses CompletableFuture</td>
+    		<td style="color:green">Consumes LESS memory</td>
+    		<td><a href="https://nickebbitt.github.io/blog/2017/03/22/async-web-service-using-completable-future">nickebbitt.github.io</a></td>
+    	</tr>
+    </table>
+  </body>
+</html>
