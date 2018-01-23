@@ -17,7 +17,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import database.MySQLAccess;
-import maths.Calculator;
 
 /**
  * Servlet implementation class SimpleServlet
@@ -68,19 +67,6 @@ public class MySQLQueryServlet extends HttpServlet {
 			out.print("<font color=\"green\" size=\"+1\">Welcome to the simple sample for MySQL</font>");
 			out.print("<br/><font color=\"red\">If NO records are displayed, insert rows in the table</font>");
 			out.print("<br/>");
-			// String s1=request.getParameter("number_1");
-			// out.print("S1: "+s1);
-			// String s2=request.getParameter("number_2");
-			// out.print("S2: "+s2);
-			// out.print("This is from Simple Servlet");
-			// Calculator calculator=new Calculator();
-			// out.print("<br/>");
-			// try {
-			// out.print("Result: "+calculator.add(s1, s2));
-			// } catch (Exception e) {
-			// // TODO Auto-generated catch block
-			// e.printStackTrace();
-			// }
 			try {
 				Class.forName("com.mysql.jdbc.Driver");
 			} catch (ClassNotFoundException e) {
