@@ -19,10 +19,10 @@
 	    <ul class="nav navbar-nav">
 	   	<!-- Bootstrap: Mobile Specific -->
         <li class="dropdown">
-	       <a class="dropdown-toggle" data-toggle="dropdown" href="#">Bootstrap MOBILE Specific
+	       <a class="dropdown-toggle" data-toggle="dropdown" href="/ServletNJsp">Bootstrap MOBILE Specific
 	       <span class="caret"></span></a>
 	       <ul class="dropdown-menu">
-	         <li><a href="bootstrap/mobile/horizontal_scroll.jsp">Horizontal Scroll for Small Devices [under 768px]</a></li>
+	         <li><a href="/ServletNJsp/bootstrap/mobile/horizontal_scroll.jsp">Horizontal Scroll for Small Devices [under 768px]</a></li>
 	       </ul>
 	     </li>
 	     
@@ -31,7 +31,7 @@
 	       <a class="dropdown-toggle" data-toggle="dropdown" href="#">Bootstrap
 	       <span class="caret"></span></a>
 	       <ul class="dropdown-menu">
-	         <li><a href="car.jsp">Bordered Table</a></li>
+	         <li><a href="/ServletNJsp/car.jsp">Bordered Table</a></li>
 	       </ul>
 	     </li>
 	     	    
@@ -40,7 +40,7 @@
 	       <a class="dropdown-toggle" data-toggle="dropdown" href="#">Java
 	       <span class="caret"></span></a>
 	       <ul class="dropdown-menu">
-	         <li><a href="car.jsp">HashMap and Usage in Web Page</a></li>
+	         <li><a href="/ServletNJsp/car.jsp">HashMap and Usage in Web Page</a></li>
 	       </ul>
 	     </li>
 	     	    
@@ -49,7 +49,7 @@
 	       <a class="dropdown-toggle" data-toggle="dropdown" href="#">JSP
 	       <span class="caret"></span></a>
 	       <ul class="dropdown-menu">
-	         <li><a href="car.jsp">HashMap and Usage in Web Page</a></li>
+	         <li><a href="/ServletNJsp/car.jsp">HashMap and Usage in Web Page</a></li>
 	       </ul>
 	     </li>
 	     
