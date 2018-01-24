@@ -18,8 +18,8 @@
     </style>
 </head>
 <body>
-    <h2>JSON Call to AsyncServlet</h2>
-    <div ng-app="" ng-controller="asyncServlet">
+    <h2>JSON Call to MessageServlet</h2>
+    <div ng-app="" ng-controller="categoryController">
         <table>
             <tr>
                 <th>Message from [First Name]</th>
@@ -32,8 +32,8 @@
         </table>
     </div>
     <script>
-        function asyncServlet($scope, $http) {
-        	  $http.get('/rest/jersey/AsyncServletWithTimeOut').
+        function categoryController($scope, $http) {
+        	  $http.get('/RestAPIs/jersey/message').
         	    success(function(data, status, headers, config) {
         	      $scope.message = data;
         	      console.log("Json DATA: "+data);

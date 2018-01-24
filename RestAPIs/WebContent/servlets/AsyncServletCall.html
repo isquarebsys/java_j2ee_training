@@ -18,20 +18,22 @@
     </style>
 </head>
 <body>
-    <h2>Synchronous Servlet</h2>
-    <div ng-app="" ng-controller="syncSingleThread">
+    <h2>JSON Call to AsyncServlet</h2>
+    <div ng-app="" ng-controller="asyncServlet">
         <table>
             <tr>
-                <th>Message</th>
+                <th>Message from [First Name]</th>
+                <th>Message from [Last Name]</th>
             </tr>
             <tr>
-                <td>{{ message }}</td>
+                <td>{{ message.firstName }}</td>
+                <td>{{ message.lastName }}</td>
             </tr>
         </table>
     </div>
     <script>
-        function syncSingleThread($scope, $http) {
-        	  $http.get('/rest/jersey/SyncSingleThread').
+        function asyncServlet($scope, $http) {
+        	  $http.get('/RestAPIs/jersey/AsyncServletWithTimeOut').
         	    success(function(data, status, headers, config) {
         	      $scope.message = data;
         	      console.log("Json DATA: "+data);
