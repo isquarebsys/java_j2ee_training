@@ -22,16 +22,25 @@
 	       <a class="dropdown-toggle" data-toggle="dropdown" href="#">Java
 	       <span class="caret"></span></a>
 	       <ul class="dropdown-menu">
-	         <li><a href="/ServletNJsp/car.jsp">HashMap and Usage in Web Page</a></li>
+	         <li><a href="/ServletNJsp/jsp/car.jsp" target="_blank">HashMap and Iteration</a></li>
 	       </ul>
 	     </li>
-	     	    
+
+		<!-- Servlets -->
+        <li class="dropdown">
+	       <a class="dropdown-toggle" data-toggle="dropdown" href="#">Servlets
+	       <span class="caret"></span></a>
+	       <ul class="dropdown-menu">
+	         <li><a href="/ServletNJsp/servlets/SessionExample.html">Form Post</a></li>
+	         <li><a href="/ServletNJsp/servlets/SessionExample.html">Session Storing</a></li>
+	       </ul>
+	     </li>	     	    
 	    <!-- JSP -->
         <li class="dropdown">
 	       <a class="dropdown-toggle" data-toggle="dropdown" href="#">JSP
 	       <span class="caret"></span></a>
 	       <ul class="dropdown-menu">
-	         <li><a href="/ServletNJsp/car.jsp">HashMap and Usage in Web Page</a></li>
+	         <li><a href="/ServletNJsp/jsp/car.jsp" target="_blank">HashMap and Iteration</a></li>
 	       </ul>
 	     </li>
 	     
