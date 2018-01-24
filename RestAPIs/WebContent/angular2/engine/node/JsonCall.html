@@ -19,29 +19,27 @@
 	<div w3-include-html="../../../index.html"></div>
 	<div class="container">
 		<button type="button" class="btn btn-info" data-toggle="collapse"
-			data-target="#functions_covered">Steps</button>
+			data-target="#functions_covered">Functions Covered</button>
 		<div id="functions_covered" class="collapse">
 			<div class="page-header">
-				<div class="well">
-					<li>Install the Angular CLI if not done already
-						<br/>npm install -g @angular/cli
-					<li>Create a new project and its skeleton
-						<br/>ng new my-app
-						<br/>Patience, please. It takes time to set up a new project; most of it is spent installing npm packages
-
-					<li>Launch the app
-						<br/>cd my-app
-						<br/>ng serve –open
-						<br/>The ng serve command launches the server, watches your files, and rebuilds the app as you make changes to those files
-						<br/>--open automatically opens the browser  @ <a href="http://localhost:4200/">http://localhost:4200/</a>
-					
-				</div>
+				<li>HttpClient to load a JSON from an API
 			</div>
 		</div>
 		<div class="jumbotron">
-			<h2>Loading a Component directly from Browser without using Node to transpile TS</h2></div>
+			<h2>Installation of Angular CLI and Creating Hello World Project</h2>
+		</div>
+		<div class="well">
+			<li>Create a new project and its skeleton</li>
+				 <br/>ng new JsonCall 
+			<li>Navigate to D:\ws\angular2\JsonCall\src\app directory</li>
+				<br/>Replace the contents of this directory with the files from files under 
+				<a href="http://localhost:8080/RestAPIs/angular2/engine/node/json_call">json_call directory</a>
+			<li>Launch the app </li>
+				<br />cd JsonCall 
+				<br/>ng serve –open 
+		</div>
 	</div>
-	
+
 </body>
 
 </html>
