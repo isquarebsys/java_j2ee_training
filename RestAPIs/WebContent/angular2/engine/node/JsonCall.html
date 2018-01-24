@@ -18,6 +18,9 @@
 <body>
 	<div w3-include-html="../../../index.html"></div>
 	<div class="container">
+		<div class="page-header">
+			<h2>Installation of Angular CLI and Creating Hello World Project</h2>
+		</div>
 		<button type="button" class="btn btn-info" data-toggle="collapse"
 			data-target="#functions_covered">Functions Covered</button>
 		<div id="functions_covered" class="collapse">
@@ -25,10 +28,16 @@
 				<li>HttpClient to load a JSON from an API
 			</div>
 		</div>
-		<div class="jumbotron">
-			<h2>Installation of Angular CLI and Creating Hello World Project</h2>
+		<button type="button" class="btn btn-info" data-toggle="collapse"
+			data-target="#how_it_works">How does it work</button>
+		<div id="how_it_works" class="collapse">
+			<div class="well">
+			<li>This uses HttpClient [See app.component.ts]. This ts uses the interface <b>ngOnInit</b>
+				<br/>This method uses http.get to load the JSON Data
+		</div>
 		</div>
 		<div class="well">
+			<li>Navigate to the directory D:\ws\angular2
 			<li>Create a new project and its skeleton</li>
 				 <br/>ng new JsonCall
 			<li>Download all files from the
@@ -38,6 +47,7 @@
 			<li>Launch the app </li>
 				<br />cd JsonCall 
 				<br/>ng serve –open 
+			<li>In order to test, run the RestAPIs project on Tomcat so that http://localhost:8080/RestAPIs/jersey/message returns a JSON
 		</div>
 	</div>
 
