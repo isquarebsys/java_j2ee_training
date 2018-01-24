@@ -16,25 +16,7 @@
 	    <div class="navbar-header">
 	      <a class="navbar-brand" href="#">Java,Servlet and JSP</a>
 	    </div>
-	    <ul class="nav navbar-nav">
-	   	<!-- Bootstrap: Mobile Specific -->
-        <li class="dropdown">
-	       <a class="dropdown-toggle" data-toggle="dropdown" href="/ServletNJsp">Bootstrap MOBILE Specific
-	       <span class="caret"></span></a>
-	       <ul class="dropdown-menu">
-	         <li><a href="/ServletNJsp/bootstrap/mobile/horizontal_scroll.jsp">Horizontal Scroll for Small Devices [under 768px]</a></li>
-	       </ul>
-	     </li>
-	     
-	    <!-- Bootstrap -->
-        <li class="dropdown">
-	       <a class="dropdown-toggle" data-toggle="dropdown" href="#">Bootstrap
-	       <span class="caret"></span></a>
-	       <ul class="dropdown-menu">
-	         <li><a href="/ServletNJsp/car.jsp">Bordered Table</a></li>
-	       </ul>
-	     </li>
-	     	    
+	    <ul class="nav navbar-nav">	     
 	    <!-- Java -->
         <li class="dropdown">
 	       <a class="dropdown-toggle" data-toggle="dropdown" href="#">Java
