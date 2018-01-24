@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -9,23 +9,16 @@
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 <script src="https://www.w3schools.com/lib/w3.js"></script>
-<div w3-include-html="index.html"></div>
+<div w3-include-html="../../index.html"></div>
 <body>
-	<script>
-		w3.includeHTML();
-	</script>
 	<div class="container">
 	<div class="page-header">
-		<h1>Configuring Jersey as REST API within SpringBoot</h1>
+				<h1>Instructions to setup SpringBoot samples</h1>
 	</div>
 		<div class="well">
-			<li>Add a class called JerseyConfig
-			<li>Add a class to represent Jersey Endpoint
-				[JerseyEndpointSample.java]
-			<li>Register a ServletRegistrationBean in *Application
-				[DemoApplication.java]
-				<br/>This registers JERSEY servlet for the path /jersey/*
-			<li>Access the Jersey Endpoint by calling <a href="http://localhost:8080/jersey/hello" target="_blank">Check the Endpoint</a>
+			<li><font color="red">Stop the Tomcat where the CourseContents run [if you are using server]</font>
+			<li>Run the DemoApplication.java in SpringBootMaven project [Run as Java Application]
+			<li><a href="http://localhost:8080/" target="_blank">Access the Course Contents Now</a>
 		</div>
 	</div>
 </body>
