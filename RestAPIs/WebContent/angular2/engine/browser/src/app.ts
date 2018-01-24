@@ -11,6 +11,6 @@ import {Component} from '@angular/core';
 export default class App {
   public text: string;
   constructor() {
-    this.text = 'Hello world!';
+    this.text = 'Hello world from Component 1';
   }
 }

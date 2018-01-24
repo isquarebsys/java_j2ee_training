@@ -13,15 +13,6 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://www.w3schools.com/lib/w3.js"></script>
-<script src="https://unpkg.com/zone.js/dist/zone.js"></script>
-<script src="https://unpkg.com/zone.js/dist/long-stack-trace-zone.js"></script>
-<script src="https://unpkg.com/reflect-metadata@0.1.3/Reflect.js"></script>
-<script src="https://unpkg.com/systemjs@0.19.31/dist/system.js"></script>
-<script src="config.js"></script>
-<script>
-	System.import('app')
-		.catch(console.error.bind(console));
-</script>
 </head>
 
 <body>
@@ -32,16 +23,23 @@
 		<div id="functions_covered" class="collapse">
 			<div class="page-header">
 				<div class="well">
-					<li>config.js specifies to load the transpilers etc in Browser
-					<li>When you the use the tag my-app anywhere in the html, it replaces the content as defined in the app.ts
-						<br/>In app.ts, my-app specifies a div with {{text}} and this will be replaced with the content from the constructor of app.ts
+					<li>Install the Angular CLI if not done already
+						<br/>npm install -g @angular/cli
+					<li>Create a new project and its skeleton
+						<br/>ng new my-app
+						<br/>Patience, please. It takes time to set up a new project; most of it is spent installing npm packages
+
+					<li>Launch the app
+						<br/>cd my-app
+						<br/>ng serve –open
+						<br/>The ng serve command launches the server, watches your files, and rebuilds the app as you make changes to those files
+						<br/>--open automatically opens the browser  @ <a href="http://localhost:4200/">http://localhost:4200/</a>
+					
 				</div>
 			</div>
 		</div>
 		<div class="jumbotron">
-			<h2>Loading a Component directly from Browser
-			without using Node to transpile TS</h2></div>
-		<my-app> loading... </my-app>
+			<h2>Loading a Component directly from Browser without using Node to transpile TS</h2></div>
 	</div>
 	
 </body>
