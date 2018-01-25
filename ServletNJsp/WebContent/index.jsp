@@ -30,7 +30,7 @@
 		         <li><a href="/ServletNJsp/servlets/RedirectExample.html" target="_blank">Request Redirect</a></li>
 		         <li><a href="/ServletNJsp/servlets/SessionExample.html" target="_blank">Session Storing</a></li>
 		         <li><a href="/ServletNJsp/servlets/SessionClose.html" target="_blank">Session Closing</a></li>
-		         <li><a href="/ServletNJsp/servlets/SessionExample.html" target="_blank">Servlet Filters</a></li>
+		         <li><a href="/ServletNJsp/servlets/ServletFilters.html" target="_blank">Servlet Filters</a></li>
 		</div>	
 		<div class="w3-third">
 			<h2>JSP</h2>
