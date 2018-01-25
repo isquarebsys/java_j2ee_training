@@ -19,22 +19,43 @@
 	<div w3-include-html="../../../index.html"></div>
 	<div class="container">
 		<div class="page-header">
-			<h2>Router Sample</h2>
+			<h2>Injectable, Router and Service Sample</h2>
 		</div>
 		<button type="button" class="btn btn-info" data-toggle="collapse"
 			data-target="#functions_covered">Functions Covered</button>
 		<div id="functions_covered" class="collapse">
 			<div class="page-header">
-				<li>Router Module
+				<li>Routers
+				<li>Service
+				<li>Injectable
 			</div>
 		</div>
 		<button type="button" class="btn btn-info" data-toggle="collapse"
 			data-target="#how_it_works">How does it work</button>
 		<div id="how_it_works" class="collapse">
 			<div class="well">
-			<li>
+				<p><h3>Person Component [person.ts]</h3>
+					<li>Person is a basic object representing a person
+				</p>
+				<p><h3>PeopleService [people.service.ts]</h3>
+					<li>This creates an array of objects
+					<li>Is Injected 
+				</p>
+				<p><h3>PeopleListComponent [people-list\people-list.component.ts]</h3>
+					<li>Calls the PeopleService and initialises people as array
+				</p>
+				<p><h3>PersonDetailsComponent [people-details\people-details.component.ts]</h3>
+					<li>Represent a specific Person
+				</p>
+			</div>
 		</div>
-		</div>
+		<button type="button" class="btn btn-info" data-toggle="collapse"
+			data-target="#references">References</button>
+		<div id="references" class="collapse">
+			<div class="well">
+				<li>Step by Step Guide: <a href="https://www.barbarianmeetscoding.com/blog/2016/03/25/getting-started-with-angular-2-step-by-step-1-your-first-component/">barbarianmeetscoding.com</a>
+			</div>
+		</div>		
 		<div class="well">
 			<li>Navigate to the directory D:\ws\angular2
 			<li>Create a new project and its skeleton</li>
