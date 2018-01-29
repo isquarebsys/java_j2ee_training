@@ -1,5 +1,5 @@
 <%@taglib uri = "http://www.springframework.org/tags/form" prefix = "form"%>
-<jsp:include page="nav.jsp" />  
+<jsp:include page="../nav.jsp" />  
 <html>
    <head>
       <title>Spring MVC Form Handling</title>
