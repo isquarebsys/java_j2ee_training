@@ -30,10 +30,13 @@
 		<div id="overview" class="collapse">			
 				<h3><font color="maroon">Overview</font></h3>
 					<li>How to QUERY rows for 1 to many associations
+					
 		</div>			
 		<div id="example" class="collapse">			
 				<h3><font color="maroon">Example</font></h3>
 				<li>Example LOADS multiple address for a given student
+				<li>StudentWithMultipleAddress is mapped to the StudentAddress as <font color="red">@OneToMany(targetEntity=StudentAddress.class) and as a List</font> 
+				
 		</div>
 		
 		<div id="result" class="collapse">			
@@ -49,11 +52,16 @@
 				String hql = "from StudentWithMultipleAddress";
 				Query query = session1.createQuery(hql);
 				List<StudentWithMultipleAddress> objectList = query.list();
-				 
+				
+				out.print("<table border=\"3\"  class=\"table table-striped\">");
+				out.print("<tr><th>Name</th><th>Country</th></tr>");				 
 				for (StudentWithMultipleAddress object : objectList) {
-				    out.println("Name: "+ object.getName());
-				    out.println("Country: "+ object.getCountry());
+					out.print("<tr>");
+				    out.println("<td>"+object.getName()+"</td>");
+				    out.println("<td>"+object.getCountry()+"</td>");
+				    out.print("</tr>");
 				}
+				out.print("</table>");
 				session1.close();
 			%>				
 		</div>					

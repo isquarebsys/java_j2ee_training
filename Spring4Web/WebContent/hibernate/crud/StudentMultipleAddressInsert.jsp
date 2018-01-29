@@ -33,6 +33,7 @@
 		<div id="example" class="collapse">			
 				<h3><font color="maroon">Example</font></h3>
 				<li>Example creates multiple address for a given student
+				<li>StudentWithMultipleAddress is mapped to the StudentAddress as <font color="red">@OneToMany(targetEntity=StudentAddress.class) and as a List</font> 
 		</div>
 		
 		<div id="result" class="collapse">			
