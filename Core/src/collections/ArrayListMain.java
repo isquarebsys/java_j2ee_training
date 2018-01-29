@@ -9,8 +9,6 @@ public class ArrayListMain {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		List studentList=new ArrayList();
-		studentList.add("Pooja");
-		studentList.add("Kokila");
 		studentList.add("Surya");
 		studentList.add("Sanjana");
 		Iterator studentIterator=studentList.iterator();

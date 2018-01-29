@@ -13,7 +13,7 @@ public class ArrayListWithObject {
 		List studentList=new ArrayList();
 		
 		Student student=new Student();
-		student.setName("Pooja");
+		student.setName("Surya");
 		student.setCourseName("Java");
 
 		studentList.add(student);
