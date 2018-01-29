@@ -37,7 +37,7 @@ public class PersonController {
     	personDao=applicationContext.getBean(PersonDAO.class);
     	Person person=new Person();
     	person.setName(request.getParameter("name"));
-    	person.setName(request.getParameter("country"));
+    	person.setCountry(request.getParameter("country"));
     	personDao.save(person);
         model.addObject("person", person);
         return "person_added";      
