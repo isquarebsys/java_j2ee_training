@@ -55,6 +55,7 @@
 				addressList.add(address);
 					
 				StudentWithMultipleAddress person = new StudentWithMultipleAddress("Vijay",addressList);
+				person.setCountry("India");
 				session1.persist(person);//persisting the object
 
 				t.commit();//transaction is commited
