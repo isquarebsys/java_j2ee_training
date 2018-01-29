@@ -34,6 +34,7 @@ public class StudentMultipleAddressInsertTest {
 		addressList.add(address);
 			
 		StudentWithMultipleAddress person = new StudentWithMultipleAddress("Vijay",addressList);
+		person.setCountry("India");
 		session.persist(person);//persisting the object
 
 		t.commit();//transaction is commited
