@@ -38,6 +38,9 @@
 					<a href="https://www.javatpoint.com">javatpoint</a>
 				</div>
 		         <li><a href="/ServletNJsp/jsp/ImplicitObjects.html" target="_blank">ImplicitObjects</a></li>
+		       	<li><a href="/ServletNJsp/jsp/Directives.jsp" target="_blank">Directives</a></li>         
+		       	<li><a href="/ServletNJsp/jsp/Bean.jsp" target="_blank">Bean, useBean</a></li>
+		       	<li><a href="/ServletNJsp/jsp/Jstl.jsp" target="_blank">JSTL</a></li>           
 		         <li><a href="/ServletNJsp/jsp/car.jsp" target="_blank">HashMap and Iteration</a></li>
 		</div>
 	</div>	
