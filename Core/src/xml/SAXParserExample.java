@@ -41,7 +41,7 @@ public class SAXParserExample extends DefaultHandler {
 			// get a new instance of parser
 			SAXParser sp = spf.newSAXParser();
 			// parse the file and also register this class for call backs
-			sp.parse("file:///D:/ws/java/Core/src/xml/Employee.xml", this);
+			sp.parse("file:///D:/ws/git/java/Core/src/xml/Employee.xml", this);
 
 		} catch (SAXException se) {
 			se.printStackTrace();

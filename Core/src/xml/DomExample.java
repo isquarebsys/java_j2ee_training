@@ -23,7 +23,7 @@ public class DomExample {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 
 		try {
-			File xmlFile = new File("D:/ws/java/Core/src/xml/Employee.xml");
+			File xmlFile = new File("D:/ws/git/java/Core/src/xml/Employee.xml");
 			DocumentBuilder builder = factory.newDocumentBuilder();
 			Document document = builder.parse(xmlFile);
 			System.out.println(document.getFirstChild());

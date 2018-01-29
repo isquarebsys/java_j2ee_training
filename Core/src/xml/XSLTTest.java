@@ -12,9 +12,9 @@ import javax.xml.transform.stream.StreamSource;
  */
 public class XSLTTest {
 	public static void main(String[] args) {
-		String dataXML = "D:/ws/java/Core/src/xml/cd_catalog.xml";
-		String inputXSL = "D:/ws/java/Core/src/xml/cd_catalog.xsl";
-		String outputHTML = "D:/ws/java/Core/src/xml/cd_catalog_out.html";
+		String dataXML = "D:/ws/git/java/Core/src/xml/cd_catalog.xml";
+		String inputXSL = "D:/ws/git/java/Core/src/xml/cd_catalog.xsl";
+		String outputHTML = "D:/ws/git/java/Core/src/xml/cd_catalog_out.html";
 
 		XSLTTest st = new XSLTTest();
 		try {

@@ -10,7 +10,7 @@ public class FileOutputStreamMain {
 		FileOutputStream fos = null;
 		try {
 			// create new file input stream
-			fos = new FileOutputStream("D:\\ws\\training\\java\\Core\\src\\file\\test.txt");
+			fos = new FileOutputStream("D:\\ws\\git\\java\\Core\\src\\file\\test.txt");
 			// read till the end of the file
 			fos.write(new String("Testing output file stream").getBytes());
 		} catch (Exception ex) {

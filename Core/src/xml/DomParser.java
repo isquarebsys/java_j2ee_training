@@ -14,7 +14,7 @@ public class DomParser {
 	public void parseDocument() {
 		System.out.println("parseDocument:start");
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		File xmlFile = new File("D:/ws/java/Core/src/xml/Employee.xml");
+		File xmlFile = new File("D:/ws/git/java/Core/src/xml/Employee.xml");
 		DocumentBuilder builder;
 		try {
 			builder = factory.newDocumentBuilder();

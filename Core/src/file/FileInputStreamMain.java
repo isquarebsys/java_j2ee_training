@@ -12,7 +12,7 @@ public class FileInputStreamMain {
 		char c;
 		try {
 			// create new file input stream
-			fis = new FileInputStream("D:\\ws\\training\\java\\Core\\src\\file\\test.txt");
+			fis = new FileInputStream("D:\\ws\\git\\java\\Core\\src\\file\\test.txt");
 			// read till the end of the file
 			while ((i = fis.read()) != -1) {
 				// converts integer to character
