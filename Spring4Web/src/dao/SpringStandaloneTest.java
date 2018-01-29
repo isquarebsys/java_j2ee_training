@@ -7,13 +7,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import dao.PersonDAO;
 import to.Person;
 
-public class SpringHibernateMain {
+public class SpringStandaloneTest {
 
 	public static void main(String[] args) {
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring4_standalone.xml");
 		PersonDAO personDAO = context.getBean(PersonDAO.class);
 		Person person = new Person();
-		person.setName("Ayyappan"); person.setCountry("Chennai");
+		person.setName("Ayyappan"); person.setCountry("India");
 		personDAO.save(person);
 		
 		System.out.println("Person::"+person);
