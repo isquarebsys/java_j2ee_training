@@ -55,6 +55,17 @@
 				<li><a href="https://github.com/isquarebsys/java_j2ee_training/tree/master/Core/src/socket/SocketClient.java" target="_blank">Socket Client</a></li>	
 				<li><a href="https://github.com/isquarebsys/java_j2ee_training/tree/master/Core/src/threads/SocketServer.java" target="_blank">Socket Server</a></li>
 		</div>
+		<div class="w3-third">
+			<h2>Special Features</h2>
+				<li><a href="https://github.com/isquarebsys/java_j2ee_training/tree/master/Core/src/special/inject/DaggerTest.java" target="_blank">Inject using Dagger</a></li>	
+				<li><a href="https://github.com/isquarebsys/java_j2ee_training/tree/master/Core/src/special/future/CallableNFeature.java" target="_blank">Callable and Future</a></li>
+				<li><a href="https://github.com/isquarebsys/java_j2ee_training/tree/master/Core/src/special/lambda/MethodReferenceTest.java" target="_blank">Lambda->Method Reference</a></li>
+		</div>
+		<div class="w3-third">
+			<h2>Date Time</h2>
+				<li><a href="https://github.com/isquarebsys/java_j2ee_training/tree/master/Core/src/utils/date/Java8DateAPIs.java" target="_blank">Java 8 Date APIs</a></li>	
+				<li><a href="https://github.com/isquarebsys/java_j2ee_training/tree/master/Core/src/utils/date/DateTimeFormatter.java" target="_blank">Date Time Formatter</a></li>	
+		</div>
 	</div>	
 </body>
 </html>
