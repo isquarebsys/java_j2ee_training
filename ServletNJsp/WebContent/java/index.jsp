@@ -39,15 +39,21 @@
 				
 		</div>			
 		<div class="w3-third">
-			<h2>Xml</h2>
+			<h2>Xml and Xsl</h2>
 				<li><a href="https://github.com/isquarebsys/java_j2ee_training/tree/master/Core/src/xml/DomExample.java" target="_blank">DOM Parser</a></li>	
 				<li><a href="https://github.com/isquarebsys/java_j2ee_training/tree/master/Core/src/xml/SAXParserExample.java" target="_blank">SAX Parser</a></li>
+				<li><a href="https://github.com/isquarebsys/java_j2ee_training/tree/master/Core/src/xml/XSLTTest.java" target="_blank">Xsl</a></li>
 		</div>
 		
 		<div class="w3-third">
 			<h2>Threads</h2>
 				<li><a href="https://github.com/isquarebsys/java_j2ee_training/tree/master/Core/src/threads/RunnableDemo.java" target="_blank">Using Runnable</a></li>	
 				<li><a href="https://github.com/isquarebsys/java_j2ee_training/tree/master/Core/src/threads/ThreadDemo.java" target="_blank">Using Thread</a></li>
+		</div>
+		<div class="w3-third">
+			<h2>Socket</h2>
+				<li><a href="https://github.com/isquarebsys/java_j2ee_training/tree/master/Core/src/socket/SocketClient.java" target="_blank">Socket Client</a></li>	
+				<li><a href="https://github.com/isquarebsys/java_j2ee_training/tree/master/Core/src/threads/SocketServer.java" target="_blank">Socket Server</a></li>
 		</div>
 	</div>	
 </body>

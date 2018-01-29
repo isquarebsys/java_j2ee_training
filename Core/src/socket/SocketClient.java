@@ -14,7 +14,7 @@ import java.net.*;
  * 
  * */
 
-public class Client1 {
+public class SocketClient {
 
 	public static void main(String[] args) {
 		try {
