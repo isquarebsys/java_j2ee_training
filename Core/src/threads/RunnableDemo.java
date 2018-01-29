@@ -1,4 +1,4 @@
-package threading;
+package threads;
 
 class RunnableDemo implements Runnable {
 	private Thread t;

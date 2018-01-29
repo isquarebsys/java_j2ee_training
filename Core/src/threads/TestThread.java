@@ -1,4 +1,4 @@
-package threading;
+package threads;
 
 public class TestThread {
 

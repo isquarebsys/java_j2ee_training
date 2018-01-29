@@ -15,9 +15,9 @@
 		<div class="w3-third">
 			<h2>Java</h2>
 				<div class="well">Reference Materials: 
-					<a href="https://www.javatpoint.com">javatpoint</a>
+					<a href="https://github.com/isquarebsys/java_j2ee_training/tree/master/Core">github</a>
 				</div>
-		         <li><a href="/ServletNJsp/jsp/car.jsp" target="_blank">HashMap and Iteration</a></li>
+		         <li><a href="/ServletNJsp/java/index.jsp" target="_blank">See DETAILED Contents</a></li>
 		</div>
 		<div class="w3-third">
 			<h2>Servlets</h2>

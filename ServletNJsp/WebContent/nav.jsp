@@ -23,7 +23,7 @@
 	       <a class="dropdown-toggle" data-toggle="dropdown" href="#">Java
 	       <span class="caret"></span></a>
 	       <ul class="dropdown-menu">
-	         <li><a href="/ServletNJsp/jsp/car.jsp" target="_blank">HashMap and Iteration</a></li>
+	         <li><a href="/ServletNJsp/java/index.jsp" target="_blank">Contents</a></li>
 	       </ul>
 	     </li>
 

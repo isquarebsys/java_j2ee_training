@@ -1,4 +1,4 @@
-package threading;
+package threads;
 
 class ThreadDemo extends Thread {
 	private Thread t;
