@@ -11,7 +11,7 @@
 <jsp:include page="../../nav.jsp" />  
 <body>
 	<div class="container">
-		<div class="page-header"><h1>Load a Table</h1></div>
+		<div class="page-header"><h1>Create rows in Table</h1></div>
 			<p>
 			</p>
 		<button type="button" class="btn btn-info" data-toggle="collapse"
