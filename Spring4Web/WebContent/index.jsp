@@ -32,7 +32,8 @@
 				<li><a href="/Spring4Web/student/add" target="_blank">Controller, Form</a></li>
 				<li><a href="/Spring4Web/student/add" target="_blank">Loading a Model</a></li>
 				<li><a href="/Spring4Web/person/add" target="_blank">Load Bean from Config</a></li>
-				<li><a href="/Spring4Web/person/add" target="_blank">Hibernate DAO and Bean</a></li>
+				<li><a href="/Spring4Web/person/add" target="_blank">DAO with Bean</a></li>
+				<li><a href="/Spring4Web/person/add/template" target="_blank">DAO with HibernateTemplate</a></li>
 			</div>
 			<div class="w3-third">
 				<h2>Hiberate [Standalone]</h2>

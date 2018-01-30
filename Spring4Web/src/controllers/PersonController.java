@@ -14,12 +14,14 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 import org.springframework.web.servlet.ModelAndView;
 
 import dao.PersonDAO;
+import dao.PersonDAOImplWithTemplate;
 import to.Person;
 import to.Student;
 
 @Controller
 public class PersonController {
 	private PersonDAO personDao;
+	private PersonDAOImplWithTemplate personDAOWithTemplate;
  
     @RequestMapping("/person/list")
     public String handleRequest(HttpSession session,ModelAndView model)  throws Exception {
@@ -47,7 +49,24 @@ public class PersonController {
     public ModelAndView newPerson() {
        return new ModelAndView("add_person", "command", new Person());
     }   
-        
+    
+    @RequestMapping(value = "/person/add/template", method = RequestMethod.GET)
+    public ModelAndView newPersonWithTemplate() {
+       return new ModelAndView("hibernate_template", "command", new Person());
+    }    
+
+    @RequestMapping(value = "/person/added/template", method = RequestMethod.POST)
+    public String saveUserWithTempate(HttpServletRequest request,ModelAndView model) {
+    	HttpSession session=request.getSession();
+    	ApplicationContext applicationContext = WebApplicationContextUtils.getRequiredWebApplicationContext(session.getServletContext());
+    	personDAOWithTemplate=applicationContext.getBean(PersonDAOImplWithTemplate.class);
+    	Person person=new Person();
+    	person.setName(request.getParameter("name"));
+    	person.setCountry(request.getParameter("country"));
+    	personDAOWithTemplate.savePerson(person);
+        model.addObject("person", person);
+        return "person_added";      
+    }
 //    @RequestMapping(value = "/edit", method = RequestMethod.GET)
 //    public ModelAndView editUser(HttpServletRequest request) {
 //        int userId = Integer.parseInt(request.getParameter("id"));

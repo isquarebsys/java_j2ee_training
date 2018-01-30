@@ -44,5 +44,13 @@
 	<bean id="personDAO" class="dao.PersonDAOImpl">
 		<property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />
 	</bean>
+	
+    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">  
+    	<property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory"></property>  
+    </bean>  
+      
+    <bean id="personDAOWithTemplate" class="dao.PersonDAOImplWithTemplate">  
+    	<property name="template" ref="hibernateTemplate"></property>  
+    </bean>	
 
 </beans>

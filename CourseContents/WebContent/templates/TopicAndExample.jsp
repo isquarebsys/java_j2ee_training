@@ -17,6 +17,10 @@
 		<button type="button" class="btn btn-info" data-toggle="collapse"
 			data-target="#result">Result</button>			
 			
+		<button type="button" class="btn btn-info" data-toggle="collapse"
+			data-target="#references">References</button>			
+
+		
 		<div id="overview" class="collapse">			
 				<h3><font color="maroon">Overview</font></h3>
 				<li>HQL refers to Hibernate Query Language
@@ -27,8 +31,11 @@
 		</div>
 		
 		<div id="result" class="collapse">			
-				<h3><font color="maroon">Result</font></h3>
-			
+				<h3><font color="maroon">Result</font></h3>			
+		</div>	
+						
+		<div id="references" class="collapse">			
+				<h3><font color="maroon">References</font></h3>			
 		</div>					
 	</div>		
 	

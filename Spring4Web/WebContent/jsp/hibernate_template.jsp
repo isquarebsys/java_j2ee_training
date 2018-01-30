@@ -6,7 +6,7 @@
 </head>
 <body>
 	<div class="container">
-	<div class="page-header"><h1>Hibernate DAO within Spring Configuration</h1></div>
+	<div class="page-header"><h1>Hibernate Template within Spring Configuration</h1></div>
 			<p>
 			</p>
 		<button type="button" class="btn btn-info" data-toggle="collapse"
@@ -26,12 +26,15 @@
 					<li>Use hibernate by configuring within springapp-servlet.xml
 					<li>dataSource is a bean referring to the org.apache.commons.dbcp.BasicDataSource
 					<li>This dataSource bean is further referred by the bean->hibernate3AnnotatedSessionFactory
+					<li>hibernate3AnnotatedSessionFactory is referred by the Hibernate Template->PersonDAOImplWithTemplate
+				<h3><font color="green">Advantages of using Hibernate Template</font></h3>
+					<li>No need to write extensive code	
 		</div>			
 		
 		<div id="example" class="collapse">
 			<div class="jumbotron">
-				<li>PersonController loads the Bean named PersonDAO from WEB-INF/springapp-servlet.xml
-				<li>Uses the PersonDAO to save the data posted
+				<li>PersonController loads the Bean named PersonDAOImplWithTemplate from WEB-INF/springapp-servlet.xml
+				<li>Uses the PersonDAOImplWithTemplate to save the data posted
 	
 				<form:form method="POST" action="/Spring4Web/person/added">
 					<table>
