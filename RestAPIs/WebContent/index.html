@@ -4,44 +4,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style>
-* {
-  box-sizing: border-box;
-}
-.menu {
-  float:left;
-  width:20%;
-  text-align:center;
-}
-.menuitem {
-  background-color:#e5e5e5;
-  padding:8px;
-  margin-top:7px;
-}
-.main {
-  float:left;
-  width:60%;
-  padding:0 20px;
-}
-.right {
-  background-color:#e5e5e5;
-  float:left;
-  width:20%;
-  padding:15px;
-  margin-top:7px;
-  text-align:center;
-}
-
-@media only screen and (max-width:620px) {
-  /* For mobile phones: */
-  .menu, .main, .right {
-    width:100%;
-  }
-}
-</style>	  
 	</head>
 <body>
 	<nav class="navbar navbar-default">
@@ -55,16 +21,6 @@
 	       <a class="dropdown-toggle" data-toggle="dropdown" href="#">Angular 1
 	       <span class="caret"></span></a>
 	       <ul class="dropdown-menu">
-	         <li><a href="http://localhost:8080/RestAPIs/angular/json_call/ajax.html" target="_blank">Plain AJAX</a>
-	         <li><a href="http://localhost:8080/RestAPIs/angular/scope/color_example.html" target="_blank">Scope</a>
-	         <li><a href="http://localhost:8080/RestAPIs/angular/controllers/2_way_sync.html" target="_blank">2 Way Binding</a>
-	         <li><a href="http://localhost:8080/RestAPIs/angular/services/location_example.html" target="_blank">Services->Location</a>
-	         <li><a href="http://localhost:8080/RestAPIs/angular/services/http_example.html" target="_blank">Services->Http Service</a>
-	         <li><a href="http://localhost:8080/RestAPIs/angular/routers/simple_routing.html" target="_blank">Routing</a>
-	         <li><a href="http://localhost:8080/RestAPIs/angular/forms/form_reset_example.html" target="_blank">Forms->Reset</a>
-	         <li><a href="http://localhost:8080/RestAPIs/angular/filters/name_filter.html" target="_blank">Filters</a>
-	         <li><a href="http://localhost:8080/RestAPIs/angular/json_call/message.html" target="_blank">JSON Call</a></li>
-	         <li><a href="http://localhost:8080/RestAPIs/angular/routers/routing_with_controller_1.html" target="_blank">Routing with Controllers</a>
 	       </ul>	       
 	     </li>	    
 	   	<!-- Angular 2 -->
@@ -72,13 +28,6 @@
 	       <a class="dropdown-toggle" data-toggle="dropdown" href="#">Angular 2
 	       <span class="caret"></span></a>
 	       <ul class="dropdown-menu">
-	         <li><a href="http://localhost:8080/RestAPIs/angular2/engine/browser/index.html" target="_blank">Sample without using Node.js</a></li>
-	         <li><a href="http://localhost:8080/RestAPIs/angular2/engine/node/HelloWorld.html" target="_blank">Installation of CLI and Hello World Project</a></li>
-	         <li><a href="http://localhost:8080/RestAPIs/angular2/engine/node/JsonCall.html" target="_blank">Json Call using HttpClient</a></li>
-	         <li><a href="http://localhost:8080/RestAPIs/angular2/engine/node/Router.html" target="_blank">Injectable</a></li>
-	         <li><a href="http://localhost:8080/RestAPIs/angular2/engine/node/ObservableService.html" target="_blank">Observable [RxJs]</a></li>
-	         <li><a href="http://localhost:8080/RestAPIs/angular2/engine/node/Router.html" target="_blank">Route</a></li>
-	         <li><a href="http://localhost:8080/RestAPIs/angular2/engine/node/Router.html" target="_blank">Service</a></li>
 	       </ul>	       
 	     </li>
 		<!-- JQuery -->
@@ -111,5 +60,34 @@
 	    </ul>
 	  </div>
 	</nav>
+	
+	<div class="container">
+		<div class="w3-row-padding">
+			<div class="w3-third">
+				<h3>Angular 1</h3>
+					<li><a href="http://localhost:8080/RestAPIs/angular/json_call/ajax.html" target="_blank">Plain AJAX</a>					
+ 					<li><a href="http://localhost:8080/RestAPIs/angular/scope/color_example.html" target="_blank">Scope</a>
+			         <li><a href="http://localhost:8080/RestAPIs/angular/controllers/2_way_sync.html" target="_blank">2 Way Binding</a>
+			         <li><a href="http://localhost:8080/RestAPIs/angular/services/location_example.html" target="_blank">Services->Location</a>
+			         <li><a href="http://localhost:8080/RestAPIs/angular/services/http_example.html" target="_blank">Services->Http Service</a>
+			         <li><a href="http://localhost:8080/RestAPIs/angular/routers/simple_routing.html" target="_blank">Routing</a>
+			         <li><a href="http://localhost:8080/RestAPIs/angular/forms/form_reset_example.html" target="_blank">Forms->Reset</a>
+			         <li><a href="http://localhost:8080/RestAPIs/angular/filters/name_filter.html" target="_blank">Filters</a>
+			         <li><a href="http://localhost:8080/RestAPIs/angular/json_call/message.html" target="_blank">JSON Call</a></li>
+			         <li><a href="http://localhost:8080/RestAPIs/angular/routers/routing_with_controller_1.html" target="_blank">Routing with Controllers</a>
+			</div>
+	
+			<div class="w3-third">
+				<h3>Angular 2</h3>
+			         <li><a href="http://localhost:8080/RestAPIs/angular2/engine/browser/index.html" target="_blank">Sample without using Node.js</a></li>
+			         <li><a href="http://localhost:8080/RestAPIs/angular2/engine/node/HelloWorld.html" target="_blank">Installation of CLI and Hello World Project</a></li>
+			         <li><a href="http://localhost:8080/RestAPIs/angular2/engine/node/JsonCall.html" target="_blank">Json Call using HttpClient</a></li>
+			         <li><a href="http://localhost:8080/RestAPIs/angular2/engine/node/Router.html" target="_blank">Injectable</a></li>
+			         <li><a href="http://localhost:8080/RestAPIs/angular2/engine/node/ObservableService.html" target="_blank">Observable [RxJs]</a></li>
+			         <li><a href="http://localhost:8080/RestAPIs/angular2/engine/node/Router.html" target="_blank">Route</a></li>
+			         <li><a href="http://localhost:8080/RestAPIs/angular2/engine/node/Router.html" target="_blank">Service</a></li>
+			</div>
+		</div>	
+	</div>	
 </body>
 </html>
