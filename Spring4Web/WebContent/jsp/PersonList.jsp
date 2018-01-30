@@ -1,29 +1,36 @@
-<%@taglib uri = "http://www.springframework.org/tags/form" prefix = "form"%>
-<jsp:include page="../nav.jsp" />  
+<%@page import="to.Person"%>
+<%@page import="java.util.List"%>
+<%@page import="dao.PersonDAOImplWithTemplate"%>
+<%@page import="org.springframework.web.context.support.WebApplicationContextUtils"%>
+<%@page import="org.springframework.context.ApplicationContext"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-   <head>
-      <title>Spring MVC Form Handling</title>
-   </head>
-   <body>
-   <p><h1>Spring functions covered</h1>
-   		<li>Displays the form fields stored from a model [StudentController]
-   		<li>Redirects to student_added.jsp where the model is accessed using $
-   	</p>
-      <h2>Student Information from the MODEL</h2>
-      <table>
-         <tr>
-            <td>Name</td>
-            <td>${name}</td>
-         </tr>
-         <tr>
-            <td>Age</td>
-            <td>${age}</td>
-         </tr>
-         <tr>
-            <td>ID</td>
-            <td>${id}</td>
-         </tr>
-      </table>  
-   </body>
-   
+<jsp:include page="../nav.jsp" />  
+<body>
+	<div class="container">
+		<h3><font color="maroon">List of Persons using Hibernate Template</font></h3>
+		<%
+			ApplicationContext applicationContext = WebApplicationContextUtils.getRequiredWebApplicationContext(session.getServletContext());
+			PersonDAOImplWithTemplate personDAOWithTemplate=applicationContext.getBean(PersonDAOImplWithTemplate.class);
+	        List<Person> persons = personDAOWithTemplate.getPersons();
+		%>	
+		<table class="table table-striped"">
+		<tr>  
+			<th>Name</th><th>Country</th>
+		</tr>  
+		<% 
+			for(Person person:persons){
+	        	out.print("<tr>");
+	        	out.print("<td>"+person.getName()+"</td>");
+	        	out.print("<td>"+person.getCountry()+"</td>");
+	        	out.print("</tr>");
+		}
+		%>
+		</table>		
+	</div>		
+	
+	
+</body>
 </html>

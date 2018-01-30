@@ -35,6 +35,7 @@
 		
 		<div id="result" class="collapse">			
 				<h3><font color="maroon">Result</font></h3>
+				<li><a href="/Spring4Web/person/list">See the list of Persons</a>
 		<%
 			Configuration cfg=new Configuration();
 			cfg.configure("hibernate.cfg.xml");//populates the data of the configuration file

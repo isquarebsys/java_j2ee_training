@@ -25,10 +25,10 @@ public class PersonController {
  
     @RequestMapping("/person/list")
     public String handleRequest(HttpSession session,ModelAndView model)  throws Exception {
-    	ApplicationContext applicationContext = WebApplicationContextUtils.getRequiredWebApplicationContext(session.getServletContext());
-    	personDao=applicationContext.getBean(PersonDAO.class);
-        List<Person> listUsers = personDao.list();
-        model.addObject("personList", listUsers);
+//    	ApplicationContext applicationContext = WebApplicationContextUtils.getRequiredWebApplicationContext(session.getServletContext());
+//    	personDAOWithTemplate=applicationContext.getBean(PersonDAOImplWithTemplate.class);
+//        List<Person> persons = personDAOWithTemplate.getPersons();
+//        model.addObject("personList", persons);
         return "PersonList";
     }
      
