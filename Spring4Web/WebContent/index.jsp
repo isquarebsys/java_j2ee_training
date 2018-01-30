@@ -33,10 +33,10 @@
 				<h3>Spring Web with Hibernate</h3>
 				<li><a href="https://github.com/isquarebsys/java_j2ee_training/tree/master/Spring4Web/src/controllers/IndexHtmlController.java" target="_blank">Load an Index Page</a>
 				<li><a href="/Spring4Web/student/add" target="_blank">Controller, Form</a></li>
-				<li><a href="/Spring4Web/student/add" target="_blank">Loading a Model</a></li>
+				<li><a href="/Spring4Web/student/add" target="_blank">Populate Model using Form</a></li>
 				<li><a href="/Spring4Web/person/add" target="_blank">Load Bean from Config</a></li>
-				<li><a href="/Spring4Web/person/add" target="_blank">DAO with Bean</a></li>
-				<li><a href="/Spring4Web/person/add/template" target="_blank">HibernateTemplate->DAO</a></li>
+				<li><a href="/Spring4Web/person/add" target="_blank">DAO with Bean->Create a Person</a></li>
+				<li><a href="/Spring4Web/person/add/template" target="_blank">HibernateTemplate->DAO->Create a Person</a></li>
 				<li><a href="/Spring4Web/person/list" target="_blank">HibernateTemplate->List table rows</a></li>
 				<li><a href="/Spring4Web/person/list" target="_blank">HibernateTemplate->Delete table rows</a></li>
 			</div>
