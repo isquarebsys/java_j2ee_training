@@ -76,12 +76,16 @@ public class PersonController {
 //        return model;      
 //    }
 //     
-//    @RequestMapping(value = "/delete", method = RequestMethod.GET)
-//    public ModelAndView deleteUser(HttpServletRequest request) {
-//        int userId = Integer.parseInt(request.getParameter("id"));
-//        personDao.delete(userId);
-//        return new ModelAndView("redirect:/");     
-//    }
+    @RequestMapping(value = "/person/delete", method = RequestMethod.GET)
+    public String deleteUser(HttpServletRequest request) {
+    	HttpSession session=request.getSession();
+    	ApplicationContext applicationContext = WebApplicationContextUtils.getRequiredWebApplicationContext(session.getServletContext());
+    	personDAOWithTemplate=applicationContext.getBean(PersonDAOImplWithTemplate.class);
+        int userId = Integer.parseInt(request.getParameter("id"));
+        Person personToDelete=personDAOWithTemplate.getById(userId);
+        personDAOWithTemplate.deletePerson(personToDelete);
+        return "PersonList";
+    }
 //     
 //    @RequestMapping(value = "/save", method = RequestMethod.POST)
 //    public ModelAndView saveUser(@ModelAttribute Person person) {

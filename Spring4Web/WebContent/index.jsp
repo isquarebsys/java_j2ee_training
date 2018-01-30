@@ -36,11 +36,13 @@
 				<li><a href="/Spring4Web/student/add" target="_blank">Loading a Model</a></li>
 				<li><a href="/Spring4Web/person/add" target="_blank">Load Bean from Config</a></li>
 				<li><a href="/Spring4Web/person/add" target="_blank">DAO with Bean</a></li>
-				<li><a href="/Spring4Web/person/add/template" target="_blank">DAO with HibernateTemplate</a></li>
+				<li><a href="/Spring4Web/person/add/template" target="_blank">HibernateTemplate->DAO</a></li>
+				<li><a href="/Spring4Web/person/list" target="_blank">HibernateTemplate->List table rows</a></li>
+				<li><a href="/Spring4Web/person/list" target="_blank">HibernateTemplate->Delete table rows</a></li>
 			</div>
 			<div class="w3-third">
 				<h3>Hiberate [Standalone]</h3>
-					<li><a href="/Spring4Web/hibernate/crud/CreatePerson.jsp" target="_blank">Create->1 row in Table</a></li>
+					<li><a href="/Spring4Web/hibernate/crud/CreatePerson.jsp" target="_blank">Create->1 row in Person Table</a></li>
 					<li><a href="/Spring4Web/hibernate/crud/UserSingleAddressInsertTest.jsp" target="_blank">Create->1 Address for an User</a></li>
 					<li><a href="/Spring4Web/hibernate/crud/StudentMultipleAddressInsert.jsp" target="_blank">Create->Multiple Address for a Student</a></li>
 					<li><a href="/Spring4Web/hibernate/query/hql.jsp" target="_blank">HQL</a></li>					
