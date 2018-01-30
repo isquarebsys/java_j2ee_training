@@ -51,14 +51,23 @@
 				Session session1 = factory.openSession();
 				String hql = "from StudentWithMultipleAddress";
 				Query query = session1.createQuery(hql);
-				List<StudentWithMultipleAddress> objectList = query.list();
+				List<StudentWithMultipleAddress> studentList = query.list();
 				
 				out.print("<table border=\"3\"  class=\"table table-striped\">");
-				out.print("<tr><th>Name</th><th>Country</th></tr>");				 
-				for (StudentWithMultipleAddress object : objectList) {
+				out.print("<tr><th>Student Id</th><th>Name</th><th>Country</th><th>Address</th></tr>");				 
+				for (StudentWithMultipleAddress student: studentList) {
 					out.print("<tr>");
-				    out.println("<td>"+object.getName()+"</td>");
-				    out.println("<td>"+object.getCountry()+"</td>");
+					out.println("<td>"+student.getId()+"</td>");
+					out.println("<td>"+student.getName()+"</td>");
+				    out.println("<td>"+student.getCountry()+"</td>");
+				    out.println("<td>");
+				    List<StudentAddress> addressList=student.getAddresses();
+				    for (StudentAddress address: addressList) {
+				    	out.print(address.getCity());
+				    	out.print("<br/>");
+				    	out.print(address.getStreetAddress());
+				    }
+				    out.println("</td>");
 				    out.print("</tr>");
 				}
 				out.print("</table>");
