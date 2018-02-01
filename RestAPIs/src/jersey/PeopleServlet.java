@@ -21,10 +21,16 @@ public class PeopleServlet {
 	logger.log(Level.INFO, "getHello:Start");
 	List resultList=new ArrayList<>();
 	Result result= new Result();
-	result.setName("Person1");
+	result.setName("Person 1");
 	result.setHeight("190");
 	result.setMass("90");
 	resultList.add(result);
+	// 
+	Result result2= new Result();
+	result2.setName("Person 2");
+	result2.setHeight("280");
+	result2.setMass("100");
+	resultList.add(result2);
     logger.log(Level.INFO, "getHello:End");
     return resultList;
    }
