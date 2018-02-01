@@ -31,7 +31,10 @@ export class PeopleService {
   function mapPersons(response:Response): Person[]{
    // The response of the API has a results
    // property with the actual results
-   return response.json().results.map(toPerson);
+   //return response.json().results.map(toPerson); 
+   // This line was throwing error as Cannot read property 'map' of undefined
+   // .results was removed as per https://stackoverflow.com/questions/42714255/angular2-map-cannot-read-property-map-of-undefined
+   return response.json().map(toPerson);
 }
 
 function toPerson(r:any): Person{
@@ -50,7 +53,9 @@ function toPerson(r:any): Person{
 // I extract the id from the person url
 // that's because the Starwars API doesn't have an id field
 function extractId(personData:any){
- let extractedId = personData.url.replace('http://swapi.co/api/people/','').replace('/','');
+ // let extractedId = personData.url.replace('http://swapi.co/api/people/','').replace('/','');
+ // replace function is throwing error, so TEMPORARILY HARD CODE it
+ let extractedId="2";
  return parseInt(extractedId);
 }
 }
