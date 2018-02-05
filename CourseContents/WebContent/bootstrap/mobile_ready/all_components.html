@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li> 
+        <li><a href="#">Page 3</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+	<h2>Inline Forms</h2>
+	<form class="form-inline" action="/action_page.php">
+	  <div class="form-group">
+		<label for="email">Email address:</label>
+		<input type="email" class="form-control" id="email">
+	  </div>
+	  <div class="form-group">
+		<label for="pwd">Password:</label>
+		<input type="password" class="form-control" id="pwd">
+	  </div>
+	  <div class="checkbox">
+		<label><input type="checkbox"> Remember me</label>
+	  </div>
+	  <button type="submit" class="btn btn-default">Submit</button>
+	</form>
+	
+	<h2>Dropdown</h2>
+	<div class="dropdown">
+	  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+	  <span class="caret"></span></button>
+	  <ul class="dropdown-menu">
+		<li><a href="#">HTML</a></li>
+		<li><a href="#">CSS</a></li>
+		<li><a href="#">JavaScript</a></li>
+	  </ul>
+	</div>
+	
+	  <h2>Table</h2>
+	  <p>The .table-responsive class creates a responsive table which will scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, there is no difference:</p>                                                                                      
+	  <div class="table-responsive">          
+	  <table class="table">
+		<thead>
+		  <tr>
+			<th>#</th>
+			<th>Firstname</th>
+			<th>Lastname</th>
+			<th>Age</th>
+			<th>City</th>
+			<th>Country</th>
+			<th>City</th>
+			<th>Country</th>		
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<td>1</td>
+			<td>Anna</td>
+			<td>Pitt</td>
+			<td>35</td>
+			<td>New York</td>
+			<td>USA</td>
+			<td>New York</td>
+			<td>USA</td>		
+		  </tr>
+		  <tr>
+			<td>1</td>
+			<td>Anna</td>
+			<td>Pitt</td>
+			<td>35</td>
+			<td>New York</td>
+			
+			<td>USA</td>
+			<td>New York</td>
+			<td>USA</td>		
+		  </tr>	  
+		</tbody>
+	  </table>
+  </div>
+  
+  <h2>Tabs</h2>
+	  <ul class="nav nav-tabs">
+		<li class="active"><a href="#">Home</a></li>
+		<li><a href="#">Menu 1</a></li>
+		<li><a href="#">Menu 2</a></li>
+		<li><a href="#">Menu 3</a></li>
+	  </ul>
+  <br>
+	<p><strong>Note:</strong> This example shows how to create a basic navigation tab. It is not toggleable/dynamic yet (you can't click on the links to display different content)- see the last example in the Bootstrap Tabs and Pills Tutorial to find out how this can be done.</p>
+  
+	<p>Envelope icon: <span class="glyphicon glyphicon-envelope"></span></p> 
+	<p>Envelope icon as a link:
+	  <a href="#"><span class="glyphicon glyphicon-envelope"></span></a>
+	</p>
+	<p>Search icon: <span class="glyphicon glyphicon-search"></span></p>
+	<p>Search icon on a button:
+	  <button type="button" class="btn btn-default">
+		<span class="glyphicon glyphicon-search"></span> Search
+	  </button>
+	</p>
+	
+	<h2>Panels with Contextual Classes</h2>
+	  <div class="panel-group">
+		<div class="panel panel-default">
+		  <div class="panel-heading">Panel with panel-default class</div>
+		  <div class="panel-body">Panel Content</div>
+		</div>
+
+		<div class="panel panel-primary">
+		  <div class="panel-heading">Panel with panel-primary class</div>
+		  <div class="panel-body">Panel Content</div>
+		</div>
+
+		<div class="panel panel-success">
+		  <div class="panel-heading">Panel with panel-success class</div>
+		  <div class="panel-body">Panel Content</div>
+		</div>
+
+		<div class="panel panel-info">
+		  <div class="panel-heading">Panel with panel-info class</div>
+		  <div class="panel-body">Panel Content</div>
+		</div>
+
+		<div class="panel panel-warning">
+		  <div class="panel-heading">Panel with panel-warning class</div>
+		  <div class="panel-body">Panel Content</div>
+		</div>
+
+		<div class="panel panel-danger">
+		  <div class="panel-heading">Panel with panel-danger class</div>
+		  <div class="panel-body">Panel Content</div>
+		</div>
+	  </div>
+
+	  	<h2>Buttons</h2>
+			<button type="button" class="btn">Basic</button>
+			<button type="button" class="btn btn-default">Default</button>
+			<button type="button" class="btn btn-primary">Primary</button>
+			<button type="button" class="btn btn-success">Success</button>
+			<button type="button" class="btn btn-info">Info</button>
+			<button type="button" class="btn btn-warning">Warning</button>
+			<button type="button" class="btn btn-danger">Danger</button>
+			<button type="button" class="btn btn-link">Link</button>	
+		
+		<h2>Simple Collapsible</h2>
+		  <p>Click on the button to toggle between showing and hiding content.</p>
+		  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+		  <div id="demo" class="collapse in">
+			This is a collapsible content
+		  </div>
+	</div>
+</body>
+</html>
