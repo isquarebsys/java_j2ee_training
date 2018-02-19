@@ -2,11 +2,12 @@ package com.isquarebsys.rest;
 
 import java.util.ArrayList;
 import java.util.List;
- 
+
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
- 
+@CrossOrigin
 @RestController
 public class VendorController
 {

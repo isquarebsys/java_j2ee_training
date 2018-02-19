@@ -20,6 +20,8 @@
 	<div class="container">
 		<div class="page-header">
 			<h2>Vendor Management Sample with Observable, Router and Service Sample</h2>
+			<font color="red">Pre-requisite</font>:
+				<li>VendorController in SpringBootMaven project should be running
 		</div>
 		<button type="button" class="btn btn-info" data-toggle="collapse"
 			data-target="#functions_covered">Functions Covered</button>
@@ -76,6 +78,19 @@
 				<br/>In vendorportal folder, ng g service vendor
 				<br/><font color="red">Do NOT give service name as vendor.service</font> because the command itself 
 					create service name as vendor.service
+			<li>Create Class to represent Vendor
+				<br/>In vendorportal folder, ng g class vendor
+				<br/>add attributes like id, name etc
+				<br/>Update code as per the tutorial
+			<li>Create Component to list Vendor
+				<br/>In vendorportal folder, ng g component vendor-list
+				<br/>Update code as per the tutorial
+		</div>
+		<div class="well">
+			<li>Update <b>app.module.ts</b> to import the VendorList Component
+				<br/><font color="red">Remove the PeopleListComponent and PeopleService</font>
+			<li>Update <b>app.routes.ts</b> to import and declare the VendorList Component
+				<br/><font color="red">Remove the PeopleListComponent and PeopleService if PRESENT</font>
 		</div>
 	</div>
 
