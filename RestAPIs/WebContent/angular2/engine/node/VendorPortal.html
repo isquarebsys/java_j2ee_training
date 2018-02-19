@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<base href="." />
+<title>angular2 playground</title>
+<link rel="stylesheet" href="style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+
+<body>
+	<div w3-include-html="../../../index.html"></div>
+	<div class="container">
+		<div class="page-header">
+			<h2>Vendor Management Sample with Observable, Router and Service Sample</h2>
+		</div>
+		<button type="button" class="btn btn-info" data-toggle="collapse"
+			data-target="#functions_covered">Functions Covered</button>
+		<div id="functions_covered" class="collapse">
+			<div class="page-header">
+				<li>Observable
+				<li>Routers
+				<li>Service
+				<li>Injectable
+			</div>
+		</div>
+		<button type="button" class="btn btn-info" data-toggle="collapse"
+			data-target="#how_it_works">How does it work</button>
+		<div id="how_it_works" class="collapse">
+			<div class="well">
+				<p><h3>Person Component [person.ts]</h3>
+					<li>Person is a basic object representing a person
+				</p>
+				<p><h3>PeopleService [people.service.ts]</h3>
+					<li>This creates an array of objects using Observable of RxJs
+					<li>Is Injected 
+				</p>
+				<p><h3>PeopleListComponent [people-list\people-list.component.ts]</h3>
+					<li>Calls the PeopleService and initialises people as array
+				</p>
+				<p><h3>PersonDetailsComponent [people-details\people-details.component.ts]</h3>
+					<li>Represent a specific Person
+				</p>
+			</div>
+		</div>
+		<button type="button" class="btn btn-info" data-toggle="collapse"
+			data-target="#references">References</button>
+		<div id="references" class="collapse">
+			<div class="well">
+				<li>Step by Step Guide: <a href="https://www.barbarianmeetscoding.com/blog/2016/04/02/getting-started-with-angular-2-step-by-step-6-consuming-real-data-with-http/">
+					barbarianmeetscoding.com</a>
+			</div>
+		</div>		
+		<div class="well">
+			<li>Navigate to the directory D:\ws\angular2
+			<li>Create a new project and its skeleton</li>
+				 <br/>ng new vendorportal
+			<li>Download all files from the
+				<a href="https://github.com/isquarebsys/java_j2ee_training/tree/master/RestAPIs/WebContent/angular2/engine/node/observable" target="_blank">Git</a> 
+			<li>Navigate to D:\ws\angular2\vendorportal\src\app directory</li>			
+				<br/>Replace the contents of this directory with the files downloaded
+			<li>Launch the app </li>
+				<br />cd vendorportal 
+				<br/>ng serve –open
+			<li>If you get error like <font color="red">Cannot find module '@angular-devkit/core'</font>, navigate to D:\ws\angular\observable
+				<br/>Update npm: npm update -g @angular/cli
+				<br/>npm i -D @angular-devkit/core 
+			<li>Create Service for Vendor
+				<br/>In vendorportal folder, ng g service vendor
+				<br/><font color="red">Do NOT give service name as vendor.service</font> because the command itself 
+					create service name as vendor.service
+		</div>
+	</div>
+
+</body>
+
+</html>

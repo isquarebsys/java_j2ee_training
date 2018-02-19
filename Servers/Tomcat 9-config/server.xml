@@ -151,7 +151,7 @@
 
       
       
-      <Context docBase="RestAPIs" path="/RestAPIs" reloadable="true" source="org.eclipse.jst.jee.server:RestAPIs"/><Context docBase="CourseContents" path="/CourseContents" reloadable="true" source="org.eclipse.jst.jee.server:CourseContents"/><Context docBase="Spring4Web" path="/Spring4Web" reloadable="true" source="org.eclipse.jst.jee.server:Spring4Web"/><Context docBase="ServletNJsp" path="/ServletNJsp" reloadable="true" source="org.eclipse.jst.jee.server:ServletNJsp"/></Host>
+      <Context docBase="CourseContents" path="/CourseContents" reloadable="true" source="org.eclipse.jst.jee.server:CourseContents"/><Context docBase="Spring4Web" path="/Spring4Web" reloadable="true" source="org.eclipse.jst.jee.server:Spring4Web"/><Context docBase="ServletNJsp" path="/ServletNJsp" reloadable="true" source="org.eclipse.jst.jee.server:ServletNJsp"/><Context docBase="RestAPIs" path="/RestAPIs" reloadable="true" source="org.eclipse.jst.jee.server:RestAPIs"/></Host>
     </Engine>
   </Service>
 </Server>
