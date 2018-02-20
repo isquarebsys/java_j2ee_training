@@ -25,7 +25,8 @@ import { ProductService } from '../product.service';
 				</tbody>
 			</table>
 
-			<form action="#" *ngIf="selectedProduct" #productForm="ngForm">
+			<!-- productForm is the variable name for the form and can be used within submitting the form-->
+			<form action="#" *ngIf="selectedProduct" #productForm="ngForm" (ngSubmit)="onSubmit()">
 			  <div class="form-group">
 				<label for="product_id">Product ID:</label>
 				<input type="text" class="form-control" id="product_id"  [(ngModel)]="selectedProduct.id" [ngModelOptions]="{standalone: true}" #spy>
@@ -39,7 +40,7 @@ import { ProductService } from '../product.service';
 				<label for="product_cost">Product Cost:</label>
 				<input type="text" class="form-control" id="product_cost" [(ngModel)]="selectedProduct.cost" [ngModelOptions]="{standalone: true}">
 			  </div>
-			  <button type="submit" class="btn btn-info">Submit</button>
+			  <button type="submit" class="btn btn-success" [disabled]="!productForm.form.valid">Submit</button>
 			</form>
 			
 			<!--
