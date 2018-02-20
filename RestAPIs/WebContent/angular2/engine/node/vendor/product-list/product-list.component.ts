@@ -9,32 +9,37 @@ import { ProductService } from '../product.service';
   <div class="jumbotron" style="background-color:#FFFFFF;">
 		<div class="table-responsive" id="form_details" align="center">
 			<table class="table table-responsive table-bordered" align="center">
-				<tr>
-					<td>Product Id</td>
-					<td>Product Name</td>
-					<td>Product Cost</td>
-				</tr>
-				<tr *ngFor="let product of products">
-					<td (click)="selectProduct(product)">{{product.id}} </td>
-					<td (click)="selectProduct(product)">{{product.name}} </td>
-					<td (click)="selectProduct(product)">{{product.cost}} </td>
-				</tr>
+				<thead>
+					<tr>
+						<th>Product Id</th>
+						<th>Product Name</th>
+						<th>Product Cost</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let product of products">
+						<td (click)="selectProduct(product)">{{product.id}} </td>
+						<td (click)="selectProduct(product)">{{product.name}} </td>
+						<td (click)="selectProduct(product)">{{product.cost}} </td>
+					</tr>
+				</tbody>
 			</table>
 
-			<form action="#" *ngIf="selectedProduct">
+			<form action="#" *ngIf="selectedProduct" #productForm="ngForm">
 			  <div class="form-group">
 				<label for="product_id">Product ID:</label>
-				<input type="text" class="form-control" id="product_id" value="{{selectedProduct.id}}">
+				<input type="text" class="form-control" id="product_id"  [(ngModel)]="selectedProduct.id" [ngModelOptions]="{standalone: true}" #spy>
+				<font color="red"><br>TODO: remove this: {{spy.className}}</font>
 			  </div>
 			  <div class="form-group">
 				<label for="product_name">Product Name:</label>
-				<input type="text" class="form-control" id="product_name" value="{{selectedProduct.name}}">
+				<input type="text" class="form-control" id="product_name" [(ngModel)]="selectedProduct.name" [ngModelOptions]="{standalone: true}">
 			  </div>
 			  <div class="form-group">
 				<label for="product_cost">Product Cost:</label>
-				<input type="text" class="form-control" id="product_cost" value="{{selectedProduct.cost}}">
+				<input type="text" class="form-control" id="product_cost" [(ngModel)]="selectedProduct.cost" [ngModelOptions]="{standalone: true}">
 			  </div>
-			  <button type="submit" class="btn btn-default">Submit</button>
+			  <button type="submit" class="btn btn-info">Submit</button>
 			</form>
 			
 			<!--

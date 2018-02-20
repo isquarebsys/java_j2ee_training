@@ -10,6 +10,7 @@ import { ProductService } from './product.service';
 import { appRouterModule } from "./app.routes";
 //import { VendorListComponent } from './vendor-list/vendor-list.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { FormsModule }   from '@angular/forms';
 
 @NgModule({
   declarations: [
