@@ -19,7 +19,7 @@
 	<div w3-include-html="../../../index.html"></div>
 	<div class="container">
 		<div class="page-header">
-			<h2>Angular Forms and 2 Way Binding Sample</h2>
+			<h2>Angular Forms, 2 Way Binding and Validation</h2>
 		</div>
 		<button type="button" class="btn btn-info" data-toggle="collapse"
 			data-target="#functions_covered">Functions Covered</button>
@@ -57,8 +57,12 @@
 			</form>
 					</textarea>
 					<li><font color="red">You should see the spy class names as Untouched, Touched, Changed, Invalid</font>
+						<br/>The control has been visited: ng-touched and ng-untouched
+						<br/>The control's value has changed: ng-dirty and ng-pristine
+						<br/>The control's value is valid: ng-valid	ng-invalid
 					<li>Note that <font color="red">required</font> is added in the input types
 						<br/>If required fields are not filled, you should see corresponding messages from the Angular framework itself
+					<li>Note that <font color="red">hidden</font> is used for displaying <font color="blue">form submission results</font>
 				</p>
 			</div>
 		</div>
@@ -67,6 +71,7 @@
 		<div id="references" class="collapse">
 			<div class="well">
 				<li>Step by Step Guide: <a href="https://angular.io/guide/forms">angular.io/guide/forms</a>
+				<li>Form Validation: <a href="https://angular.io/guide/form-validation">angular.io/guide/form-validation</a>
 			</div>
 		</div>		
 		<div class="well">

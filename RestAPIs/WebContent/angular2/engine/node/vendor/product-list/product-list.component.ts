@@ -24,56 +24,66 @@ import { ProductService } from '../product.service';
 					</tr>
 				</tbody>
 			</table>
-
+			
 			<!-- productForm is the variable name for the form and can be used within submitting the form-->
 			<form action="#" *ngIf="selectedProduct" #productForm="ngForm" (ngSubmit)="onSubmit()">
 			  <div class="form-group">
 				<label for="product_id">Product ID:</label>
-				<input type="text" class="form-control" id="product_id"  [(ngModel)]="selectedProduct.id" [ngModelOptions]="{standalone: true}" #spy>
+				<input type="text" class="form-control" name="product_id"  required [(ngModel)]="selectedProduct.id" [ngModelOptions]="{standalone: true}" #spy>
 				<font color="red"><br>TODO: remove this: {{spy.className}}</font>
 			  </div>
+			  
+			  
 			  <div class="form-group">
 				<label for="product_name">Product Name:</label>
-				<input type="text" class="form-control" id="product_name" [(ngModel)]="selectedProduct.name" [ngModelOptions]="{standalone: true}">
+				<input type="text" class="form-control" name="product_name" required [(ngModel)]="selectedProduct.name" [ngModelOptions]="{standalone: true}">
 			  </div>
+
+  			  <!--Place holder for required fields. This is NOT working properly, to be referred and fixed: https://angular.io/guide/forms -->
+			  <--<div *ngIf="product_name.errors.required" class="alert alert-danger">Product Name is required</div>-->
+
 			  <div class="form-group">
 				<label for="product_cost">Product Cost:</label>
-				<input type="text" class="form-control" id="product_cost" [(ngModel)]="selectedProduct.cost" [ngModelOptions]="{standalone: true}">
+				<input type="text" class="form-control" name="product_cost" required [(ngModel)]="selectedProduct.cost" [ngModelOptions]="{standalone: true}">
 			  </div>
-			  <button type="submit" class="btn btn-success" [disabled]="!productForm.form.valid">Submit</button>
+			  <button type="submit" class="btn btn-success" [disabled]="!productForm.form.valid" (click)="newProduct();">Submit</button>
 			</form>
 			
-			<!--
-			<div class="well">
-			  <section >
-				<p>
-				   <li>Product Name: {{selectedProduct.name}} 
-				   <li>Product Cost: {{selectedProduct.cost}}
-				</p>
-			  </section>			
-		  </div>
-		  -->
+
+			<!-- Elements for showing the results-->
+			<div *ngIf="selectedProduct" [hidden]="!submitted">
+			  <h2>You submitted the following:</h2>
+			  <div class="row">
+				<div class="col-xs-3">Name</div>
+				<div class="col-xs-9  pull-left">{{ selectedProduct.name }}</div>
+			  </div>
+			</div>		  
 		</div>
   </div>
   `
 })
 export class ProductListComponent implements OnInit {
+	newProduct:Product:
+	submitted=false;
+	selectedProduct: Product;
 
-  selectedProduct: Product;
+	constructor(private productService : ProductService){ }
 
-  constructor(private productService : ProductService){ }
-
-  ngOnInit(){
+	ngOnInit(){
     // NOTE: in subscribe, this.products should be products
-    this.productService
-        .getAll()
-        .subscribe(p => this.products = p);
-		
-		
-  }
+		this.productService
+			.getAll()
+			.subscribe(p => this.products = p);
+	}
 
-  selectProduct(product: Product){
-    this.selectedProduct = product;
-  }
+	selectProduct(product: Product){
+		this.selectedProduct = product;
+	}
 
+	onSubmit() { this.submitted = true; }
+	
+	newProduct() {
+		// model is a keyword, the name can NOT be anything ELSE
+		this.model  = new Product(42, 'Test', 'Test');
+	}
 }
