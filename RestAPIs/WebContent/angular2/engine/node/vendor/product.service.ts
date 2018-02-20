@@ -14,7 +14,7 @@ private baseUrl: string = 'http://localhost:9090/products';
   getAll(): Observable<Product[]>{
     let products$ = this.http
       .get(`${this.baseUrl}`, {headers: this.getHeaders()})
-      .map(mapProducts);
+      .map(mapProduct);
       return products$;
   }
 
@@ -26,7 +26,7 @@ private baseUrl: string = 'http://localhost:9090/products';
     return headers;
   }
   
-  function mapProducts(response:Response): Product[]{
+  function mapProduct(response:Response): Product[]{
    // The response of the API has a results
    // property with the actual results
    //return response.json().results.map(toProduct);
@@ -35,7 +35,7 @@ private baseUrl: string = 'http://localhost:9090/products';
 
 function toProduct(r:any): Product{
   let product = <Product>({
-    id: extractId(r),
+    id:r.id,
     name: r.name,
 	cost: r.cost
   });

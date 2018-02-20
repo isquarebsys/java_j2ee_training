@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Component, OnInit } from '@angular/core';
 import { Product } from '../product';
 import { ProductService } from '../product.service';
 
@@ -8,9 +7,16 @@ import { ProductService } from '../product.service';
   template: `
   <!-- this is the new syntax for ng-repeat -->
 	<div class="table-responsive" id="form_details" align="center">
-		<table>
+		<table class="table-responsive" border="1">
+			<tr>
+				<td>Product Id</td>
+				<td>Product Name</td>
+				<td>Product Cost</td>
+			</tr>
 			<tr *ngFor="let product of products">
 				<td (click)="selectProduct(product)">{{product.id}} </td>
+				<td (click)="selectProduct(product)">{{product.name}} </td>
+				<td (click)="selectProduct(product)">{{product.cost}} </td>
 			</tr>
 		</table>
 	</div>
@@ -32,10 +38,12 @@ export class ProductListComponent implements OnInit {
   constructor(private productService : ProductService){ }
 
   ngOnInit(){
-    //this.product = this.productService.getAll();
+    // NOTE: in subscribe, this.products should be products
     this.productService
         .getAll()
-        .subscribe(p => this.product = p);
+        .subscribe(p => this.products = p);
+		
+		
   }
 
   selectProduct(product: Product){
