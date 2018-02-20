@@ -12,10 +12,10 @@ export class VendorService {
   }
 
   getAll(): Observable<Vendor[]>{
-    let vendor$ = this.http
+    let vendors$ = this.http
       .get(`${this.baseUrl}`, {headers: this.getHeaders()})
       .map(mapVendors);
-      return vendor$;
+      return vendors$;
   }
 
   private getHeaders(){
@@ -38,7 +38,7 @@ function toVendor(r:any): Vendor{
     id: extractId(r),
     url: r.url,
     firstName: r.firstName,
-	lastName: r.lastName,
+  lastName: r.lastName
   });
   console.log('Parsed vendor:', vendor);
   return vendor;
