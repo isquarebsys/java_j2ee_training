@@ -37,18 +37,18 @@
 			data-target="#how_it_works">How does it work</button>
 		<div id="how_it_works" class="collapse">
 			<div class="well">
-				<p><h3>Person Component [person.ts]</h3>
-					<li>Person is a basic object representing a person
+				<p><h3>Vendor Component [vendor.ts]</h3>
+					<li>Represents a Vendor
 				</p>
-				<p><h3>PeopleService [people.service.ts]</h3>
+				<p><h3>VendorService [vendor.service.ts]</h3>
 					<li>This creates an array of objects using Observable of RxJs
 					<li>Is Injected 
 				</p>
-				<p><h3>PeopleListComponent [people-list\people-list.component.ts]</h3>
-					<li>Calls the PeopleService and initialises people as array
+				<p><h3>VendorListComponent [vendor-list\vendor-list.component.ts]</h3>
+					<li>Calls the VendorService and initialises vendor as array
 				</p>
-				<p><h3>PersonDetailsComponent [people-details\people-details.component.ts]</h3>
-					<li>Represent a specific Person
+				<p><h3>VendorDetailsComponent [vendor-details\vendor-details.component.ts]</h3>
+					<li>Represent a specific Vendor
 				</p>
 			</div>
 		</div>
@@ -65,9 +65,8 @@
 			<li>Create a new project and its skeleton</li>
 				 <br/>ng new vendorportal
 			<li>Download all files from the
-				<a href="https://github.com/isquarebsys/java_j2ee_training/tree/master/RestAPIs/WebContent/angular2/engine/node/observable" target="_blank">Git</a> 
-			<li>Navigate to D:\ws\angular2\vendorportal\src\app directory</li>			
-				<br/>Replace the contents of this directory with the files downloaded
+				<a href="https://github.com/isquarebsys/java_j2ee_training/tree/master/RestAPIs/WebContent/angular2/engine/node/vendor" target="_blank">Git</a> 
+				<br/><font color="red">Use <b>ONLY</b> for reference</font>
 			<li>Launch the app </li>
 				<br />cd vendorportal 
 				<br/>ng serve –open
@@ -87,6 +86,7 @@
 				<br/>Update code as per the tutorial
 		</div>
 		<div class="well">
+			<h1><font color="red">Instructions JUST in case if you copy the files from observable folder to vendor</font></h1>
 			<li>Update <b>app.module.ts</b> to import the VendorList Component
 				<br/><font color="red">Remove the PeopleListComponent and PeopleService</font>
 			<li>Update <b>app.routes.ts</b> to import and declare the VendorList Component
