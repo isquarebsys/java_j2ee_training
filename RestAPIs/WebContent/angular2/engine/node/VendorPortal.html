@@ -37,6 +37,21 @@
 			data-target="#how_it_works">How does it work</button>
 		<div id="how_it_works" class="collapse">
 			<div class="well">
+				<p><h3>Product Component [product.ts]</h3>
+					<li>Represents a Product
+				</p>
+				<p><h3>ProductService [vendor.service.ts]</h3>
+					<li>This creates an array of objects using Observable of RxJs
+					<li>Is Injected 
+				</p>
+				<p><h3>ProductListComponent [product-list\product-list.component.ts]</h3>
+					<li>Calls the ProductService and initialises product as array
+				</p>
+				<p><h3>ProductDetailsComponent [product-details\product-details.component.ts]</h3>
+					<li>Represent a specific product
+				</p>
+			</div>		
+			<div class="well">
 				<p><h3>Vendor Component [vendor.ts]</h3>
 					<li>Represents a Vendor
 				</p>
@@ -59,8 +74,37 @@
 				<li>Step by Step Guide: <a href="https://www.barbarianmeetscoding.com/blog/2016/04/02/getting-started-with-angular-2-step-by-step-6-consuming-real-data-with-http/">
 					barbarianmeetscoding.com</a>
 			</div>
-		</div>		
+		</div>
 		<div class="well">
+			<h1>Creating the PRODUCT Component</h1>
+			<li>Navigate to the directory D:\ws\angular2
+			<li>Create a new project and its skeleton</li>
+				 <br/>ng new vendorportal
+			<li>Download all files from the
+				<a href="https://github.com/isquarebsys/java_j2ee_training/tree/master/RestAPIs/WebContent/angular2/engine/node/vendor" target="_blank">Git</a> 
+				<br/><font color="red">Use <b>ONLY</b> for reference</font>
+			<li>Launch the app </li>
+				<br />cd vendorportal 
+				<br/>ng serve –open
+			<li>If you get error like <font color="red">Cannot find module '@angular-devkit/core'</font>, navigate to D:\ws\angular\observable
+				<br/>Update npm: npm update -g @angular/cli
+				<br/>npm i -D @angular-devkit/core 
+			<li>Create Service for Product
+				<br/>In vendorportal folder, ng g service product
+				<br/><font color="red">Do NOT give service name as product.service</font> because the command itself 
+					create service name as product.service
+			<li>Create Class to represent Vendor
+				<br/>In vendorportal folder, ng g class product
+				<br/>add attributes like id, name etc
+				<br/>Update code as per the tutorial
+			<li>Create Component to list Product
+				<br/>In vendorportal folder, ng g component product-list
+				<br/><font color="red">Update code as per the tutorial, if you could not do yourself</font>
+			<li>Update app.module.ts to include ProductService and ProductListComponent
+			<li>Update app.routes.ts to have /products as default route
+		</div>				
+		<div class="well">
+			<h1>Creating the VENDOR Component</h1>
 			<li>Navigate to the directory D:\ws\angular2
 			<li>Create a new project and its skeleton</li>
 				 <br/>ng new vendorportal
@@ -83,7 +127,7 @@
 				<br/>Update code as per the tutorial
 			<li>Create Component to list Vendor
 				<br/>In vendorportal folder, ng g component vendor-list
-				<br/>Update code as per the tutorial
+				<br/><font color="red">Update code as per the tutorial, if you could not do yourself</font>
 		</div>
 		<div class="well">
 			<h1><font color="red">Instructions JUST in case if you copy the files from observable folder to vendor</font></h1>
