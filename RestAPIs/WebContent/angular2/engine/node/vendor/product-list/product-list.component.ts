@@ -63,7 +63,7 @@ import { ProductService } from '../product.service';
   `
 })
 export class ProductListComponent implements OnInit {
-	newProduct:Product:
+	newProduct:Product;
 	submitted=false;
 	selectedProduct: Product;
 
