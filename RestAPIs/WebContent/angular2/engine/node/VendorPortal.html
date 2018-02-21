@@ -41,6 +41,14 @@
 					<li>When angular initialises, it loads the app.routes.ts and loads with default path
 						<br/>viz, see the keyword <font color="blue">redirectTo</font> in the above file
 						<br/>If there is <font color="red">no PATH specified</font>, the default <font color="blue">path taken is products</font>
+				<h3>Component and Routing for adding new Product</h3>
+					<li>Create a new path in app.routes.ts, viz, new_product
+					<li>Create a new component in command prompt: ng g component new_product
+					<li>In app.routes.ts, Import and Point the component as->component: NewProductComponent
+				<h3>Testing the new routing path</h3>
+					<li>Simply change the URL in the browser to http://localhost:4200/new_product
+					<li>You should be able to see the html content from new-product/
+					
 			</div>
 			<div class="well">
 				<p><h3>Product Component [product.ts]</h3>

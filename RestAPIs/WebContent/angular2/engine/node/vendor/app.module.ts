@@ -11,11 +11,13 @@ import { appRouterModule } from "./app.routes";
 //import { VendorListComponent } from './vendor-list/vendor-list.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { FormsModule }   from '@angular/forms';
+import { NewProductComponent } from './new-product/new-product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-	ProductListComponent
+	ProductListComponent,
+	NewProductComponent
 	],
   imports: [
     BrowserModule,

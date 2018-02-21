@@ -1,7 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
-//import { PeopleListComponent } from "./people-list/people-list.component";
-//import { VendorListComponent } from "./vendor-list/vendor-list.component";
 import { ProductListComponent } from "./product-list/product-list.component";
+import { NewProductComponent } from "./new-product/new-product.component";
 
 // Route config let's you map routes to components
 const routes: Routes = [
@@ -16,6 +15,10 @@ const routes: Routes = [
     redirectTo: '/products',
     pathMatch: 'full'
   },
+   {
+    path: 'new_product',
+	component: NewProductComponent
+  }
 ];
 
 export const appRouterModule = RouterModule.forRoot(routes);
