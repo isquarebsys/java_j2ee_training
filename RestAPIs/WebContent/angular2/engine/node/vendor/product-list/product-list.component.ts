@@ -39,9 +39,6 @@ import { ProductService } from '../product.service';
 				<input type="text" class="form-control" name="product_name" required [(ngModel)]="selectedProduct.name" [ngModelOptions]="{standalone: true}">
 			  </div>
 
-  			  <!--Place holder for required fields. This is NOT working properly, to be referred and fixed: https://angular.io/guide/forms -->
-			  <--<div *ngIf="product_name.errors.required" class="alert alert-danger">Product Name is required</div>-->
-
 			  <div class="form-group">
 				<label for="product_cost">Product Cost:</label>
 				<input type="text" class="form-control" name="product_cost" required [(ngModel)]="selectedProduct.cost" [ngModelOptions]="{standalone: true}">
