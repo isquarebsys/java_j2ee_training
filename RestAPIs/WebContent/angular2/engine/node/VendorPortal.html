@@ -37,10 +37,19 @@
 			data-target="#how_it_works">How does it work</button>
 		<div id="how_it_works" class="collapse">
 			<div class="well">
-				<h2>Router Components</h2>
-					<li>When angular initialises, it loads the app.routes.ts and loads with default path
+				<h2>Working of a Router Component</h2>
+					<li>Routes is NOTHING but <font color="red">HYPERLINKS linked to Angular COMPONENT</font>
+					<li>Its <font color="red">NOT JUST hyperlink</font>, a <font color="blue">component also get INITIALISED to handle the URL</font>
+				
+					<li><font color="blue">app.component.html</font> is the <font color="red">1st page to load</font>
+						<br/>In app.component.html, note the usage of <font color="blue">router-outlet</font> tag
+					<li>router-outlet then loads the app.routes.ts 
+					<li>The routing paths are loaded using app.routes.ts 
 						<br/>viz, see the keyword <font color="blue">redirectTo</font> in the above file
 						<br/>If there is <font color="red">no PATH specified</font>, the default <font color="blue">path taken is products</font>
+					
+				<h3>Simple FLOW</h3>
+					<li>app.component.html--calls-->router-outlet---calls-->app.route.ts--loads-->the component---renders--->html
 				<h3>Component and Routing for adding new Product</h3>
 					<li>Create a new path in app.routes.ts, viz, new_product
 					<li>Create a new component in command prompt: ng g component new_product
