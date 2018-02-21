@@ -36,6 +36,7 @@
 				</div>
 
 				  <ul class="nav navbar-nav" id="menu_tabs">
+					<li><a href="/products">Product List</a></li>
 					<li><a href="/new_product">New Product</a></li>
 				  </ul>	
 				<!-- Login DIV -->
@@ -61,73 +62,10 @@
 					</form>	
 				</div>
 			</nav>
-		
-
-		
 			<div class="jumbotron" style="background-color:#FFFFFF;">
-				<div id="tabs_div" align="right">
-				  <!-- Tabs will be appended by createTabsForForm() function-->
-					<ul class="nav nav-tabs" id="forms_tabs_list" align="right">
-						<!--
-						  <li><a href="#">New</a></li>
-						  <li><a href="#">Reports</a></li>
-						-->
-					</ul>				
-				</div>
-				<!-- Form will be listed here to ADD DATA-->
-				<div id="data_add_div" style="display:none" align="right" style="background-color:#FFFFFF;">
-					<div class="table-responsive" id="data_add_table_div">
-						<form class="form-inline" action="" id="data_add_form">
-
-						</form>	
-						<!--<table id="new_form_table" class="table table-bordered">
-							
-						</table>-->
-					</div>			
-				</div>
-				<!-- TABLE DATA will be listed here -->
-				<div id="data_reports_div" style="display:none" align="right">
-					<!-- DATES DIV -->
-					<div id="dates_div" class="collapse in" align="right">
-						<form class="form-inline" action="">
-							  <div class="form-group">
-								<div class="col-xs-4">
-									<!---inputsm refers to small height-->
-									<input type="text" class="form-control inputsm" placeholder="Start Date [dd-mm-yyyy]" id="start_date"/>
-								</div>
-							  </div>
-							  <div class="form-group">
-								<div class="col-xs-4">
-									<input type="text" class="form-control inputsm" placeholder="End Date [dd-mm-yyyy]" id="end_date"/>
-								</div>
-							  </div>
-							  <div class="form-group">
-								<div class="col-xs-4">
-									<select class="form-control" id="form_status">
-										
-									</select>
-								</div>
-							  </div>
-							  <div class="form-group">
-								<div class="col-xs-4">
-									<button type="button" class="btn btn-success navbar-btn" id="excel_format_button">Excel Format</button>
-								</div>
-							  </div>							  
-						</form>	
-					</div>
-					<br/>
-					<!-- Table Data Display -->
-					<div class="table-responsive" id="form_details" align="center">
-					
-					</div>
-					<!-- Table Data for Excel format etc Display -->
-					<div class="table-responsive" id="export_form_details" align="center">
-					
-					</div>						
-				</div>
-				<!--Export DATA Div-->
+				<app-root></app-root>	
 			</div>
-			<app-root></app-root>
+			
 		</div>  
 		
 </body>
