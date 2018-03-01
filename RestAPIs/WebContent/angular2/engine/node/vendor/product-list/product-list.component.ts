@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../product';
+import 'rxjs/add/operator/map';
 import { ProductService } from '../product.service';
+import { Http, Response,RequestOptions, Request, RequestMethod} from '@angular/http';
 
 @Component({
   selector: 'app-product-list',
@@ -43,7 +45,7 @@ import { ProductService } from '../product.service';
 				<label for="product_cost">Product Cost:</label>
 				<input type="text" class="form-control" name="product_cost" required [(ngModel)]="selectedProduct.cost" [ngModelOptions]="{standalone: true}">
 			  </div>
-			  <button type="submit" class="btn btn-success" [disabled]="!productForm.form.valid" (click)="newProduct();">Submit</button>
+			  <button type="submit" class="btn btn-success" [disabled]="!productForm.form.valid" (click)="saveProduct();">Submit</button>
 			</form>
 			
 
@@ -60,11 +62,12 @@ import { ProductService } from '../product.service';
   `
 })
 export class ProductListComponent implements OnInit {
+	url: string = 'http://localhost:9090/add/products';
 	newProduct:Product;
 	submitted=false;
 	selectedProduct: Product;
 
-	constructor(private productService : ProductService){ }
+	constructor(private productService : ProductService,private http : Http){ }
 
 	ngOnInit(){
     // NOTE: in subscribe, this.products should be products
@@ -79,8 +82,14 @@ export class ProductListComponent implements OnInit {
 
 	onSubmit() { this.submitted = true; }
 	
-	newProduct() {
+	saveProduct() {
 		// model is a keyword, the name can NOT be anything ELSE
-		this.model  = new Product(42, 'Test', 'Test');
+		let productToUpdate  ={"id":this.selectedProduct.id,"name":this.selectedProduct.name,"cost":this.selectedProduct.cost};
+		let headers = new Headers({ 'Content-Type': 'application/json' });
+		let options = new RequestOptions({ headers: headers });
+			return this.http.post(this.url, productToUpdate, options)
+               .map((response:Response)=>{
+				console.log(response.json());
+			   }).subscribe();
 	}
 }

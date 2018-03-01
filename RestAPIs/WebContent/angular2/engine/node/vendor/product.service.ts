@@ -6,7 +6,7 @@ import { Product } from './product';
 
 @Injectable()
 export class ProductService {
-private baseUrl: string = 'http://localhost:9090/products';
+private baseUrl: string = 'http://localhost:9090/products/view';
  // Json structure: [{"id":1,"name":"Product 1","cost":"100"}]
   constructor(private http : Http){
   }
