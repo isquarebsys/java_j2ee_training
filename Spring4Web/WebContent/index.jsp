@@ -12,6 +12,17 @@
 			<h1>Spring and Hibernate</h1>
 		</div>
 		<div class="well">
+			<li><a href="https://www.boraji.com/how-to-create-a-web-project-using-maven-in-eclipse#maven-run-tomcat">How to run Maven project in Eclipse</a>
+				<br/>The Maven project has to be run with following steps
+				<br/>Add tomcat7-maven-plugin with 2.2 version in pom.xml
+				<br/>RC on Project->Run Configuration->In Goals, <font color="red">clean install</font>
+				<br/>If you get error as <font color="red">No compiler is provided in this environment</font>. Perhaps you are running on a JRE rather than a JDK?, solve as
+					<font color="green">Window->Preferences->Installed JREs->Change it to point to JDK instead of JRE</font>
+				<br/>RC on Project->Run Configuration->In Goals, give as <font color="red">tomcat7:run</font>
+			<li><a href="https://howtodoinjava.com/spring5/webmvc/spring5-mvc-hibernate5-example/">***Spring 5, Hibernate 5: Sample with Annotations</a>
+			<li><a href="https://www.boraji.com/spring-4-mvc-hibernate-5-integration-example">***Spring 4, Hibernate 5: Sample with Annotations</a>
+		</div>
+		<div class="well">
 			<h1>Spring is a popular <font color="blue">Dependency Injection</font> framework</h1>
 				<h2>Spring has 4 major components->Controllers, Component, Repository, Service</h2>
 				<li>Service is used for encapsulating the database operations [uses @Service Annotation]
