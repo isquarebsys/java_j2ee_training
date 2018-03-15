@@ -1,4 +1,4 @@
-package spring;
+package hibernate;
 
 import java.util.Properties;
 
@@ -23,9 +23,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
 @ComponentScans(value = { 
-      @ComponentScan("spring") 
+      @ComponentScan("spring") ,@ComponentScan("hibernate")
     })
-public class AppConfig {
+public class HibernateConfig {
 
    @Autowired
    private Environment env;

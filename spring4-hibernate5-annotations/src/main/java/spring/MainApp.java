@@ -5,6 +5,9 @@ import java.util.List;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import hibernate.HibernateConfig;
+import hibernate.User;
+
 /**
  * @author 
  *
@@ -12,7 +15,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class MainApp {
    public static void main(String[] args) throws SQLException {
       AnnotationConfigApplicationContext context = 
-            new AnnotationConfigApplicationContext(AppConfig.class);
+            new AnnotationConfigApplicationContext(HibernateConfig.class);
 
       UserService userService = context.getBean(UserService.class);
 

@@ -1,4 +1,4 @@
-package spring;
+package hibernate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
