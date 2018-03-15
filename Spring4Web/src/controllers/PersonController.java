@@ -5,6 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,27 +21,27 @@ import to.Student;
 
 @Controller
 public class PersonController {
+	@Autowired
+	private PersonDAO autoWiredPersonDao;
+	
 	private PersonDAO personDao;
 	private PersonDAOImplWithTemplate personDAOWithTemplate;
  
     @RequestMapping("/person/list")
     public String handleRequest(HttpSession session,ModelAndView model)  throws Exception {
-//    	ApplicationContext applicationContext = WebApplicationContextUtils.getRequiredWebApplicationContext(session.getServletContext());
-//    	personDAOWithTemplate=applicationContext.getBean(PersonDAOImplWithTemplate.class);
-//        List<Person> persons = personDAOWithTemplate.getPersons();
-//        model.addObject("personList", persons);
+    
         return "PersonList";
     }
      
     @RequestMapping(value = "/person/added", method = RequestMethod.POST)
     public String savedUser(HttpServletRequest request,ModelAndView model) {
-    	HttpSession session=request.getSession();
-    	ApplicationContext applicationContext = WebApplicationContextUtils.getRequiredWebApplicationContext(session.getServletContext());
-    	personDao=applicationContext.getBean(PersonDAO.class);
+//    	HttpSession session=request.getSession();
+//    	ApplicationContext applicationContext = WebApplicationContextUtils.getRequiredWebApplicationContext(session.getServletContext());
+//    	personDao=applicationContext.getBean(PersonDAO.class);
     	Person person=new Person();
     	person.setName(request.getParameter("name"));
     	person.setCountry(request.getParameter("country"));
-    	personDao.save(person);
+    	autoWiredPersonDao.save(person);
         model.addObject("person", person);
         return "person_added";      
     }

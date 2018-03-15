@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.orm.hibernate3.HibernateTemplate;
+import org.springframework.stereotype.Component;
 
 import to.Person;
 
+@Component
 public class PersonDAOImplWithTemplate {
 
 	HibernateTemplate template;  
