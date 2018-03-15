@@ -13,7 +13,7 @@
 		</div>
 		<div class="well">
 			<h1>Spring is a popular <font color="blue">Dependency Injection</font> framework</h1>
-				<h2>Spring has 4 major components->Component, Repository, Service</h2>
+				<h2>Spring has 4 major components->Controllers, Component, Repository, Service</h2>
 				<li>Service is used for encapsulating the database operations [uses @Service Annotation]
 					<br/>For example, UserDAO and relevant operations can be hidden using UserService
 				<li>Repository is a representation of CRUD operations [uses @Repository Annotation]
@@ -33,14 +33,8 @@
 		<div class="w3-row-padding">
 			<div class="w3-third">
 				<h3>Spring Components</h3>
-					<li><a href="http://localhost:8080/Spring4Web/person/autowire/dao?name=AutoWired using DAO">Controller with <b>AutoWired DAO</b></a>
-						<br/><font color="blue">Autowired is same as calling a bean from config file</font>->applicationContext.getBean
-						<br/>Check <b>PersonControllerWired.java</b>
-					<li><a href="http://localhost:8080/Spring4Web/person/autowire/service?name=AutoWired using Service">Controller with <b>AutoWired Service</b> and Service AutoWired with DAO</a>
-						<br/><font color="blue">Autowired is same as calling a bean from config file</font>->applicationContext.getBean
-						<br/>Check <b>PersonControllerWired.java</b>
-						<br/><font color="blue">Note</font>: PersonService is not configured in springapp-servlet.xml and is used purely using Annotations
-						
+					<li><a href="http://localhost:8080/Spring4Web/jsp/spring_autowiring.jsp">Controller with <b>AutoWired DAO</b></a>
+					<li><a href="http://localhost:8080/Spring4Web/jsp/spring_autowiring.jsp">Controller with <b>AutoWired Service</b> and Service AutoWired with DAO</a>						
 			</div>
 			<div class="w3-third">
 				<h3>Spring [Standalone]</h3>

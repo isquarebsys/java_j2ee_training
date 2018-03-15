@@ -21,6 +21,13 @@ public class PersonControllerWired {
 	@Autowired
 	private PersonService personService;
 
+    @RequestMapping(value = "/person/autowire/add")
+    public String autoWirePerson() {
+    	// person is the object used for mapping between Person object and the form
+    	// Requests encapsulated as objects are known as commands [Command Pattern]
+       return "spring_autowiring";
+    } 
+    
 	@RequestMapping(value = "/person/autowire/dao")
     public String savedUser(HttpServletRequest request,ModelAndView model) {
 //    	HttpSession session=request.getSession();
@@ -44,6 +51,6 @@ public class PersonControllerWired {
     	person.setCountry(request.getParameter("country"));
     	personService.save(person);
         model.addObject("person", person);
-        return "person_added";      
+        return "PersonList";      
     }	
 }

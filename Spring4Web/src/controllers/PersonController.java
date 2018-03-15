@@ -49,7 +49,7 @@ public class PersonController {
     @RequestMapping(value = "/person/add", method = RequestMethod.GET)
     public ModelAndView newPerson() {
        return new ModelAndView("add_person", "command", new Person());
-    }   
+    }  
     
     @RequestMapping(value = "/person/add/template", method = RequestMethod.GET)
     public ModelAndView newPersonWithTemplate() {
