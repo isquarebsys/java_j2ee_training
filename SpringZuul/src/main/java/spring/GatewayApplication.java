@@ -1,8 +1,10 @@
 package spring;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 import filters.SimpleFilter;
 
@@ -12,6 +14,8 @@ import filters.SimpleFilter;
  *
  */
 
+@EnableAutoConfiguration
+@Configuration
 @EnableZuulProxy
 @SpringBootApplication
 public class GatewayApplication {
