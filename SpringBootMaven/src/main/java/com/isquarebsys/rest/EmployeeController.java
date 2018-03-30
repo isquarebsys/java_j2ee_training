@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class EmployeeController
 {
-    @RequestMapping("/employees")
+    @RequestMapping("/springboot/employees")
     public List<Employee> getEmployees()
     {
         List<Employee> employeesList = new ArrayList<Employee>();
