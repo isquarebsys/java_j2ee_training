@@ -3,6 +3,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
+
 import filters.SimpleFilter;
 
 /**
@@ -10,6 +11,7 @@ import filters.SimpleFilter;
  * @author user
  *
  */
+
 @EnableZuulProxy
 @SpringBootApplication
 public class GatewayApplication {
