@@ -11,8 +11,10 @@ import filters.SimpleFilter;
 /**
  * https://spring.io/guides/gs/routing-and-filtering/
  * @author user
- *
+ * Run this java as main program and see the notes at application.properties how to ACCESS the APIs
  */
+
+
 
 @EnableAutoConfiguration
 @Configuration
