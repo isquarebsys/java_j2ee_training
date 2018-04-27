@@ -1,7 +1,7 @@
 package collections;
 import java.util.Vector;
 
-public class vector {
+public class VectorTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

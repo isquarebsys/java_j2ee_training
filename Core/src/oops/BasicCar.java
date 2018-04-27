@@ -1,7 +1,7 @@
 package oops;
 
-public class BasicCar implements CarBasicInterface {
-	public String getCarNames() {
+public class BasicCar implements DealerInterface {
+	public String getBrandName() {
 		return new String("Alto VXi");
 	}
 }

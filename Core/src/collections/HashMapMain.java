@@ -13,12 +13,15 @@ public class HashMapMain {
 		HashMap carMap = new HashMap();
 		Car wagonR=new Car();
 		wagonR.setBrakeType("ECB");
+		
 		Car altoVxi=new Car();
 		wagonR.setBrakeType("ABS");
 		carMap.put("AltoVxi", altoVxi);
 		carMap.put("WagonR", wagonR);
 		
 		Car mapInstance=(Car) carMap.get("WagonR");
+		
+		
 		System.out.println(mapInstance.getBrakeType());
 		Iterator carsIterator=carMap.keySet().iterator();
 		while(carsIterator.hasNext()){

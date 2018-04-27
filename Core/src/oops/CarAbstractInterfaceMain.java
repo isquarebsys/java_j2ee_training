@@ -4,15 +4,15 @@ public class CarAbstractInterfaceMain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		CarBasicInterface interface1=new CarBasicInterface() {
+		DealerInterface interface1=new DealerInterface() {
 			
 			@Override
-			public String getCarNames() {
+			public String getBrandName() {
 				// TODO Auto-generated method stub
 				return "Inside CarAbstractInterfaceMain";
 			}
 		};
-		System.out.println(interface1.getCarNames());
+		System.out.println(interface1.getBrandName());
 	} 
 
 }

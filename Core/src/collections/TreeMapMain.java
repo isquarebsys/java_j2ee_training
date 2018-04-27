@@ -26,8 +26,5 @@ public class TreeMapMain {
 			Car value=(Car)carMap.get(key);
 			System.out.println("Value: "+value.getBrakeType());
 		}
-		
-
 	}
-
 }

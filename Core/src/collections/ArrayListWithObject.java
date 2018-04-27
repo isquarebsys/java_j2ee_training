@@ -24,9 +24,5 @@ public class ArrayListWithObject {
 			System.out.println("Student Name: "+studentInList.getName());
 			System.out.println("Student Name: "+studentInList.getCourseName());
 		}
-		
-		
-
 	}
-
 }
