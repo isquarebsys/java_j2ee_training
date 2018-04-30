@@ -26,7 +26,7 @@
 			<h3>PageContext</h3>
 				<%   
 					String name=request.getParameter("first_name");  
-					pageContext.setAttribute("first_name",name,PageContext.SESSION_SCOPE);  
+					pageContext.setAttribute("first_name",name,PageContext.SESSION_SCOPE);
 				%>  			
 				<br/>First Name 
 					<font color="blue">[<% out.print(request.getParameter("first_name"));%>]</font> from the Request is stored  in Session Scope in the name
