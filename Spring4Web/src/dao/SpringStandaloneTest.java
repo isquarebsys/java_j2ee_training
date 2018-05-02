@@ -13,7 +13,7 @@ public class SpringStandaloneTest {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring4_standalone.xml");
 		PersonDAO personDAO = context.getBean(PersonDAO.class);
 		Person person = new Person();
-		person.setName("Ayyappan"); person.setCountry("India");
+		person.setName("Vijay"); person.setCountry("India");
 		personDAO.save(person);
 		
 		System.out.println("Person::"+person);

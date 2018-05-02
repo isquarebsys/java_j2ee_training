@@ -84,14 +84,14 @@ public class MySQLQueryServlet extends HttpServlet {
 				// also possible to get the columns via the column number
 				// which starts at 1
 				// e.g. resultSet.getSTring(2);
-				String user = resultSet.getString("username");
+				String user = resultSet.getString("name");
 				String website = resultSet.getString("email");
-				String summary = resultSet.getString("password");
-				Timestamp timestamp = resultSet.getTimestamp("create_time");
+//				String summary = resultSet.getString("password");
+//				Timestamp timestamp = resultSet.getTimestamp("create_time");
 				out.println("User: " + user);
 				out.println("Website: " + website);
-				out.println("summary: " + summary);
-				out.println("timestamp" + timestamp);
+//				out.println("summary: " + summary);
+//				out.println("timestamp" + timestamp);
 			}
 
 		} catch (IOException | SQLException e) {

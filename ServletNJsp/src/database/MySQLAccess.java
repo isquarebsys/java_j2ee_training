@@ -27,6 +27,7 @@ public class MySQLAccess {
             resultSet = statement.executeQuery("select * from test.user");
             writeResultSet(resultSet);
 
+            
             // PreparedStatements can use variables and are more efficient
             preparedStatement = connection
                     .prepareStatement("insert into  test.user values (?, ?, ?, ?)");
@@ -43,6 +44,7 @@ public class MySQLAccess {
 //            preparedStatement.executeUpdate();
             writeMetaData(resultSet);
             writeResultSet(resultSet);
+            
         } catch (Exception e) {
             throw e;
         } finally {
@@ -69,14 +71,14 @@ public class MySQLAccess {
             // also possible to get the columns via the column number
             // which starts at 1
             // e.g. resultSet.getSTring(2);
-            String user = resultSet.getString("username");
+            String user = resultSet.getString("name");
             String website = resultSet.getString("email");
-            String summary = resultSet.getString("password");
-            Timestamp timestamp = resultSet.getTimestamp("create_time");
+//            String summary = resultSet.getString("password");
+//            Timestamp timestamp = resultSet.getTimestamp("create_time");
             System.out.println("User: " + user);
             System.out.println("Website: " + website);
-            System.out.println("summary: " + summary);
-            System.out.println("timestamp" + timestamp);
+//            System.out.println("summary: " + summary);
+//            System.out.println("timestamp" + timestamp);
         }
     }
 

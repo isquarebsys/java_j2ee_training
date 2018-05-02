@@ -7,8 +7,5 @@ public class VehicleTest {
 //		Vehicle vehicle=new Vehicle();
 		Vehicle twoWheeler=new TwoWheeler();
 		System.out.println("No of wheels: "+twoWheeler.noOfWheels());
-		
-
 	}
-
 }
