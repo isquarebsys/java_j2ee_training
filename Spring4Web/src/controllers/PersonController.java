@@ -23,7 +23,6 @@ import to.Student;
 public class PersonController {
 	@Autowired
 	private PersonDAO autoWiredPersonDao;
-	
 	private PersonDAO personDao;
 	private PersonDAOImplWithTemplate personDAOWithTemplate;
  
