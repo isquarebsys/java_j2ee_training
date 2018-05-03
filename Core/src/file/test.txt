@@ -1,1 +1,1 @@
-Testing output file stream
+Writing from Java program
