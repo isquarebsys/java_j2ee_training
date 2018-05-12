@@ -1,16 +1,14 @@
 package com.isquarebsys.mvc;
-import java.util.Map;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/jsp")
 public class IndexController {
 
 	private String message = "Hello World";
 
-	@RequestMapping("/index")
+	@RequestMapping(value="/index",method = RequestMethod.GET)
 	public String welcome() {
 //		model.put("message", this.message);
 		return "index";
