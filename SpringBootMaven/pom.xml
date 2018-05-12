@@ -75,14 +75,19 @@
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
-			<version>${spring-kafka.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka-test</artifactId>
-			<version>${spring-kafka.version}</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.sksamuel.kafka.embedded/embedded-kafka -->
+		<dependency>
+			<groupId>com.sksamuel.kafka.embedded</groupId>
+			<artifactId>embedded-kafka_2.11</artifactId>
+			<version>0.21.0</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

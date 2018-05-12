@@ -6,13 +6,25 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Bean;
 import org.springframework.kafka.test.rule.KafkaEmbedded;
 import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.context.BootstrapWith;
+import org.springframework.test.context.TestContextBootstrapper;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.isquarebsys.SpringKafkaApplication;
 
+
+/**
+ * https://memorynotfound.com/spring-kafka-consume-producer-example/
+ * 
+ * 
+ * @author user
+ *
+ */
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes=SpringKafkaApplication.class)
 @DirtiesContext
 public class SpringKafkaApplicationTest {
 
@@ -26,6 +38,16 @@ public class SpringKafkaApplicationTest {
 
 	@Autowired
 	private Sender sender;
+	
+	@Bean
+	public Receiver receiver() {
+		return new Receiver();
+	}
+
+	@Bean
+	public Sender sender() {
+		return new Sender();
+	}	
 
 	@Test
 	public void testReceive() throws Exception {
