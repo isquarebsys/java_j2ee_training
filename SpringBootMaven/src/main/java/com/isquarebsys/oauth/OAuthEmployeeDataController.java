@@ -9,7 +9,7 @@ import com.isquarebsys.rest.Employee;
 
  
 @RestController
-public class EmployeeControllerSecured
+public class OAuthEmployeeDataController
 {
     @RequestMapping("/oauth/apis/employees")
     public List<Employee> getEmployees()

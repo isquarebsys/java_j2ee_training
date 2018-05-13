@@ -7,6 +7,15 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 
 /**
  * http://www.javainuse.com/spring/spring-boot-oauth-introduction
+ * 
+ * http://www.javainuse.com/spring/spring-boot-oauth-authorization-code
+ * 
+    The Resource Owner will ask the Client Application to get some data from the Resource Server.
+    The Resource Server asks the Resource Owner to authenticate itself and as for authorization to share data.
+    After successful authentication the Resource Server shares an authorization code with the client application
+
+ * 
+ * 
  * @author user
  *
  */
