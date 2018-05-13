@@ -14,24 +14,15 @@
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
-	      <a class="navbar-brand" href="#">Bootstrap,Spring and Hibernate</a>
+	      <a class="navbar-brand" href="http://localhost:8080/CourseContents/">Main</a>
 	    </div>
 	    <ul class="nav navbar-nav">
-	    <!-- Spring -->
-        <li class="dropdown">
-	       <a class="dropdown-toggle" data-toggle="dropdown" href="#">Bootstrap
-	       <span class="caret"></span></a>
-	       <ul class="dropdown-menu">
-	         <li><a href="/Spring4Web/student/add">Jumbotron to highlight information</a></li>
-	       </ul>
-	     </li>
-	     	    
 	    <!-- Spring -->
         <li class="dropdown">
 	       <a class="dropdown-toggle" data-toggle="dropdown" href="#">Spring
 	       <span class="caret"></span></a>
 	       <ul class="dropdown-menu">
-	         <li><a href="/Spring4Web/student/add">Controller, Form</a></li>
+	         <li><a class="navbar-brand" href="/Spring4Web">Main</a>
 	       </ul>
 	     </li>
 	     
@@ -40,7 +31,7 @@
 	       <a class="dropdown-toggle" data-toggle="dropdown" href="#">Hibernate
 	       <span class="caret"></span></a>
 	       <ul class="dropdown-menu">
-	         <li><a href="/Spring4Web/student/add">Add New Student</a></li>
+	         <li><a href="/Spring4Web">Hiberate</a></li>
 	       </ul>
 	     </li>	     
 	    </ul>
