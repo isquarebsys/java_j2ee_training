@@ -28,6 +28,7 @@
 					<li><a href="/apis/employees" target="_blank">REST Controller->Service showing employees</a>
 					<li><a href="SpringJPA.html" target="_blank">Spring's JPA [CrudRepository]</a>						
 					<li><a href="JerseyIntegrationSteps.html" target="_blank">JERSEY Integration</a>
+					<li><a href="mvc/jsp_example.html" target="_blank">MVC WebApp->JSP Rendering</a>
 			</div>
 	
 			<div class="w3-third">
@@ -39,6 +40,11 @@
 				<h3>Spring Boot <font color="blue">CONSUMing</font> Rest Services</h3>
 					<li><a href="SpringAsRestConsumer.html" target="_blank">Spring As Rest Consumer</a>					
 			</div>
+			
+			<div class="w3-third">
+				<h3>Spring Boot <font color="blue">OAuth</font></h3>
+					<li><a href="oauth/InMemorySample.html" target="_blank">In-Memory sample using admin/admin as user id/pwd</a>					
+			</div>			
 
 		</div>	
 	</div>	
