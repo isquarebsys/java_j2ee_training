@@ -28,6 +28,7 @@ public class CollegeClassTest {
 		System.out.println("Class Size: "+class1.getNoOfStudents());
 		
 		Iterator studentIterator=studentList.iterator();
+		System.out.println("Line after Iterator");
 		while(studentIterator.hasNext()) {
 			Student student=(Student)studentIterator.next();
 			System.out.println("Students first name: "+student.getFirstName());
