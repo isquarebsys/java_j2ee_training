@@ -20,7 +20,7 @@ public class MySQLAccess {
             Class.forName("com.mysql.jdbc.Driver");
             // Setup the connection with the DB
             connection = DriverManager
-                    .getConnection("jdbc:mysql://localhost/test?user=vpanchat&password=p1kvijay");
+                    .getConnection("jdbc:mysql://localhost/test?user=vpanchat&password=p1kvijay&useSSL=false");
             // Statements allow to issue SQL queries to the database
             statement = connection.createStatement();
             // Result set get the result of the SQL query
@@ -30,13 +30,13 @@ public class MySQLAccess {
             
             // PreparedStatements can use variables and are more efficient
             preparedStatement = connection
-                    .prepareStatement("insert into  test.user values (?, ?, ?, ?)");
+                    .prepareStatement("insert into  test.user values (?, ?, ?)");
             // "myuser, webpage, datum, summary, COMMENTS from feedback.comments");
             // Parameters start with 1
-            preparedStatement.setString(1, "Vijay");
+            preparedStatement.setString(1, "1");
             preparedStatement.setString(2, "TestEmail");
             preparedStatement.setString(3, "p1kvijay");
-            preparedStatement.setTimestamp(4, new java.sql.Timestamp(System.currentTimeMillis()));
+//            preparedStatement.setTimestamp(4, new java.sql.Timestamp(System.currentTimeMillis()));
             preparedStatement.executeUpdate();
             // Remove again the insert comment
 //            preparedStatement = connection.prepareStatement("delete from test.user where username= ? ;");

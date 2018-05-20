@@ -88,12 +88,13 @@ public class MySQLQueryServlet extends HttpServlet {
 				String website = resultSet.getString("email");
 //				String summary = resultSet.getString("password");
 //				Timestamp timestamp = resultSet.getTimestamp("create_time");
+				
 				out.println("User: " + user);
 				out.println("Website: " + website);
 //				out.println("summary: " + summary);
 //				out.println("timestamp" + timestamp);
+				out.println("<br/>");
 			}
-
 		} catch (IOException | SQLException e) {
 			// TODO Auto-generated catch block
 			out.print("Exception: " + e.toString());

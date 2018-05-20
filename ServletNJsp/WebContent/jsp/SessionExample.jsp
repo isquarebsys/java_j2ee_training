@@ -26,7 +26,7 @@
 			</div>
 		</div>
 		<%
-			String firstName=(String)session.getAttribute("firstName");
+			String firstName=(String)session.getAttribute("user_name");
 			out.print("First Name: "+firstName);
 		%>
 	</div>
