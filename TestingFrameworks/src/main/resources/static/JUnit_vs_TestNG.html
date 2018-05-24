@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>Here is the table that shows the features supported by JUnit and
+		TestNG.
+	<h2>JUnit4 and TestNG Feature comparison</h2>
+	<p>Both TestNG and JUnit4 looks similar, except one or two
+		features. Let's have a comparison between the two to quickly decide,
+		which technology is more favourable for Unit Testing. Below table
+		highlights the features supported by both:
+	<p style="text-align: center;">
+		<a href=//cdn.guru99.com/images/junit/052416_1236_JUnitVsTest1.png
+			class=jh-image-popup-colorbox><img title="JUnit Vs TestNG"
+			alt="JUnit Vs TestNG"
+			src=//cdn.guru99.com/images/junit/052416_1236_JUnitVsTest1.png /></a>
+	<h2>Annotations</h2>
+	<p>Both JUnit and TestNG uses annotations and almost all the
+		annotations looks similar.
+	<p>TestNG uses @BeforeMethod ,@AfterMethod similar to @Before
+		,@After in JUnit4.
+	<p>Both TestNG and Junit4 uses @Test(timeout = 1000) for timeout
+		.Check the table below for more details-
+	<table class="table table-striped">
+		<tr>
+			<td><strong>S.N.</strong></td>
+			<td><strong>Description</strong></td>
+			<td><strong>TestNG</strong></td>
+			<td><strong>JUnit 4</strong></td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Test annotation</td>
+			<td>@Test</td>
+			<td>@Test</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Executes before the first test method is invoked in the
+				current class</td>
+			<td>@BeforeClass</td>
+			<td>@BeforeClass</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Executes after all the test methods in the current class</td>
+			<td>@AfterClass</td>
+			<td>@AfterClass</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Executes before each test method</td>
+			<td>@BeforeMethod</td>
+			<td>@Before</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Executes after each test method</td>
+			<td>@AfterMethod</td>
+			<td>@After</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>annotation to ignore a test</td>
+			<td>@Test(enable=false)</td>
+			<td>@ignore</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>annotation for exception</td>
+			<td>@Test(expectedExceptions = ArithmeticException.class)</td>
+			<td>@Test(expected = ArithmeticException.class)</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>timeout</td>
+			<td>@Test(timeout = 1000)</td>
+			<td>@Test(timeout = 1000)</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>Executes before all tests in the suite</td>
+			<td>@BeforeSuite</td>
+			<td>n/a</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>Executes after all tests in the suite</td>
+			<td>@AfterSuite</td>
+			<td>n/a</td>
+		</tr>
+		<tr>
+			<td>11</td>
+			<td>Executes before a test runs</td>
+			<td>@BeforeTest</td>
+			<td>n/a</td>
+		</tr>
+		<tr>
+			<td>12</td>
+			<td>Executes after a test runs</td>
+			<td>@AfterTest</td>
+			<td>n/a</td>
+		</tr>
+		<tr>
+			<td>13</td>
+			<td>Executes before the first test method is invoked that
+				belongs to any of these groups is invoked</td>
+			<td>@BeforeGroups</td>
+			<td>n/a</td>
+		</tr>
+		<tr>
+			<td>14</td>
+			<td>run after the last test method that belongs to any of the
+				groups here</td>
+			<td>@AfterGroups</td>
+			<td>n/a</td>
+		</tr>
+	</table>
+	<h2>Suite Test</h2>
+	<p>Suites are used to execute multiple tests together. Suites can
+		be created using both TestNG and JUnit4. However, suites are more
+		powerful in TestNG as it uses very different method for execution of
+		tests. Let's understand it using code snippet as given below:
+	<p>
+		<strong>Using JUnit4</strong>
+	<p>Below class describes use of suite while working with JUnit4:
+	<pre>
+package guru99.junit;		
+import org.junit.runner.RunWith;		
+import org.junit.runners.Suite;		
+
+@RunWith(Suite.class)				
+@Suite.SuiteClasses({				
+    SuiteTest1.class,			
+    SuiteTest2.class,			
+
+})		
+
+public class JunitTest {		
+// This class remains empty,it is used only as a holder for the above annotations		
+}
+</pre>
+	<p>
+		<strong>Using TestNG</strong>
+	<p>TestNG uses xml to bundle all tests at one place.Below xml
+		describes use of suite while working with TestNG:
+	<pre>
+
+&lt;!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" &gt;
+&lt;suite name="My test suite"&gt;
+&lt;test name="testing"&gt;
+&lt;classes&gt;
+&lt;class name="com.guru99.SuiteTest1" /&gt;
+&lt;class name="com.guru99.SuiteTest2" /&gt;
+&lt;/classes&gt;
+&lt;/test&gt;
+&lt;/suite&gt;
+</pre>
+	<h2>Ignore Test</h2>
+	<p>Using both we can skip a test .Let's see it using code example
+		as given below:
+	<p>
+		<strong>Using JUnit4</strong>
+	<div>
+		<style>
+.responsive-guru99-leaderboard-bottom {
+	width: 300px;
+	height: 250px
+}
+
+@media ( min-width :500px) {
+	.responsive-guru99-leaderboard-bottom {
+		width: 468px;
+		height: 60px
+	}
+}
+
+@media ( min-width :800px) {
+	.responsive-guru99-leaderboard-bottom {
+		width: 728px;
+		height: 90px
+	}
+}
+</style>
+		<script async
+			src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
+		<ins class="adsbygoogle responsive-guru99-leaderboard-bottom"
+			style="display: inline-block" data-ad-client=ca-pub-6330153051175486
+			data-ad-slot=8759395585></ins>
+		<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+	</div>
+	<p>Below code snippet describes use of @ignore annotation while
+		working with JUnit4:
+	<pre>
+@Ignore
+public void method1() 
+{
+	System.out.println("Using @Ignore , this execution is ignored");
+}</pre>
+	<p>
+		<strong>Using TestNG</strong>
+	<p>Below code snippet describes use of @Test(enabled=false)
+		annotation while working with TestNG:
+	<pre>
+@Test(enabled=false)
+public void TestWithException()
+{  
+	System.out.println("Method should be ignored as it's not ready yet");
+}
+</pre>
+	<h2>Exception Test</h2>
+	<p>Exception testing is available both in TestNG and JUnit4. It is
+		used to check, which exception is thrown from the test?
+	<p>
+		<strong>Using JUnit4</strong>
+	<p>Below code snippet describes use of exception test while working
+		with JUnit4:
+	<pre>
+@Test(expected = ArithmeticException.class)  
+public void divideByZero() 
+{  
+	Int i = 1/0;
+}
+</pre>
+	<p>
+		<strong>Using TestNG</strong>
+	<p>Below code snippet describes use of exception test while working
+		with TestNG:
+	<pre>
+@Test(expectedExceptions = ArithmeticException.class)  
+public void divideByZero()
+{  
+Int i = 1/0;
+}	
+</pre>
+	<h2>Timeout</h2>
+	<p>This feature is implemented both in TestNg and JUnit4.Timeout is
+		used to terminate a test which takes longer than specified time (in
+		milliseconds).
+	<p>
+		<strong>Using JUnit4</strong>
+	<p>Below code snippet describes use of timeout test while working
+		with JUnit4:
+	<pre>
+@Test(timeout = 1000)  
+public void method1()
+{  
+	while (true);  
+}
+</pre>
+	<p>
+		<strong>Using TestNG</strong>
+	<div>
+		<style>
+.responsive-guru99-leaderboard-bottom {
+	width: 300px;
+	height: 250px
+}
+
+@media ( min-width :500px) {
+	.responsive-guru99-leaderboard-bottom {
+		width: 468px;
+		height: 60px
+	}
+}
+
+@media ( min-width :800px) {
+	.responsive-guru99-leaderboard-bottom {
+		width: 728px;
+		height: 90px
+	}
+}
+</style>
+		<script async
+			src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
+		<ins class="adsbygoogle responsive-guru99-leaderboard-bottom"
+			style="display: inline-block" data-ad-client=ca-pub-6330153051175486
+			data-ad-slot=8759395585></ins>
+		<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+	</div>
+	<p>Below code snippet describes use of timeout test while working
+		with TestNG:
+	<pre>
+@Test(timeOut = 1000)  
+public void method1()
+{  
+	while (true);  
+}</pre>
+	<h2>Parameterized Test</h2>
+	<p>JUnit provides an easier and readable approach to test known as
+		Parameterized test. Both TestNG and JUnit supports parameterized test
+		but differ in the way they define the parameter value. Let see this
+		one by one.
+	<p>
+		<strong>Using JUnit4</strong>
+	<p>The "@RunWith" and "@Parameter" annotations are used to provide
+		parameter value for the unit test. The annotation @Parameters have to
+		return List[] .This parameter will be passed into the class
+		constructor as an argument.
+	<pre>
+@RunWith(value = Parameterized.class)
+public class JunitTest{
+    
+    privateint number;
+    
+    public JunitTest6(int number)
+ {
+    this.number = number;
+     }
+
+     @Parameters
+    public static Collection&lt;Object[]&gt; data() 
+{
+       Object[][] data = new Object[][] { { 1 }, { 2 }, { 3 }, { 4 } };
+    returnArrays.asList(data);
+    }
+     
+     @Test
+    public void parameterTest()
+ {
+    System.out.println("Parameterized Number is : " + number);
+     }
+}
+</pre>
+	<p>
+		<strong>Using TestNG</strong>
+	<p>In TestNG, XML file or "@DataProvider" is used to provide a
+		parameter for testing.
+	<p>
+		Here @Parameters annotation declared in the method, needs a parameter
+		for testing. The data used as the parameter will provide in TestNG's
+		XML configuration files. By doing this, we can reuse a single<a
+			href=/test-case.html
+			onclick="ga('send', 'event', 'internal_linking', 'TestNG Vs JUnit: What's the Difference?', 'TestNG Vs JUnit: What's the Difference?');">
+			Test Case </a>with different data sets, and we can get different results.
+
+
+
+	
+	<pre>
+public class Test1 {
+
+    @Test
+    @Parameters(value="number")
+    public void parameterTest(int number)
+	{
+    	System.out.println("Parameterized Number is : " + number);
+    }
+     
+}
+</pre>
+	<p>See below xml file to be used for above class:
+	<pre>
+&lt;!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" &gt;
+&lt;suite name="My test suite"&gt;
+&lt;test name="testing"&gt;
+    
+&lt;parameter name="number" value="2"/&gt;    
+
+&lt;classes&gt;
+&lt;class name="com.guru99.Test1" /&gt;
+&lt;/classes&gt;
+&lt;/test&gt;
+&lt;/suite&gt;
+</pre>
+</body>
+</html>
