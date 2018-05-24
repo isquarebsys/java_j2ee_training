@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+canvas {
+	border: 1px solid black;
+}
+
+ h1{
+ 	color:maroon;
+ }
+ 
+ h2{
+ 	color:blue;
+ }
+#div1 {
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+</style>
+
+<script>
+
+var x = document.getElementById("location_demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+        } else {
+            sessionStorage.clickcount = 1;
+        }
+        document.getElementById("web_storage_result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+    } else {
+        document.getElementById("web_storage_result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+	<h1>Canvas</h1>
+	<canvas id="myCanvas">Your browser does not support the HTML5 canvas tag.</canvas>
+	<script>
+		var c = document.getElementById("myCanvas");
+		var ctx = c.getContext("2d");
+		ctx.fillStyle = "#FF0000";
+		ctx.fillRect(0, 0, 80, 100);
+	</script>
+	<hr>
+
+	<h1>Articles</h1>
+	<article>
+		<h1>Google Chrome</h1>
+		<p>Google Chrome is a free, open-source web browser developed by
+			Google, released in 2008.</p>
+	</article>
+	<hr>
+	<h1>Address element</h1>
+
+	<address>
+		Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
+		Visit us at:<br> Example.com<br> Box 564, Disneyland<br>
+		USA
+	</address>
+	<hr>
+	
+	<h1>Section Element</h1>
+	 	<section>
+			  <h1>WWF</h1>
+			  <p>The World Wide Fund for Nature (WWF) is....</p>
+		</section> 
+		
+	<h1>Video Elements</h1>
+	 <video width="320" height="240" controls>
+	  <source src="SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+	</video> 
+	
+	<h1>Web Storage [replaces Cookies]</h1>
+		<li>Store data locally within the user's browser using <font color="blue">sessionStorage and localStorage</font></li>
+		<h2>Web Storage Result</h2>
+		<div id="web_storage_result"></div>
+
+		<script>
+		// Check browser support
+		if (typeof(Storage) !== "undefined") {
+		    // Store
+		    localStorage.setItem("lastname", "Smith");
+		    // Retrieve
+		    document.getElementById("web_storage_result").innerHTML = localStorage.getItem("lastname");
+		} else {
+		    document.getElementById("web_storage_result").innerHTML = "Sorry, your browser does not support Web Storage...";
+		}
+		</script>
+		
+		<font color="blue"><h2>Session Storage using sessionStorage object</h2></font>
+		<p><button onclick="clickCounter()" type="button">Click me to see the counter increase</button></p>
+		<p>Close the browser tab (or window), and try again, and the counter is reset</p>
+	
+	<h1>Web Workers</h1>
+		<li>A web worker is a JavaScript that runs in the background, independently of other scripts, 
+		without affecting the performance of the page</li>
+		<p>Count numbers: <output id="result"></output></p>
+		<button onclick="startWorker()">Start Worker</button> 
+		<button onclick="stopWorker()">Stop Worker</button>
+		
+		<p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support Web Workers.</p>
+		
+		<script>
+		var w;
+		
+		function startWorker() {
+		    if(typeof(Worker) !== "undefined") {
+		        if(typeof(w) == "undefined") {
+		            w = new Worker("demo_workers.js");
+		        }
+		        w.onmessage = function(event) {
+		            document.getElementById("result").innerHTML = event.data;
+		        };
+		    } else {
+		        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+		    }
+		}
+		
+		function stopWorker() { 
+		    w.terminate();
+		    w = undefined;
+		}
+		</script>
+	
+	<h1>Drag and Drop</h1>
+		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<br>
+		<img id="drag1" src="drag-and-drop.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+		
+	<h1>Geo Location</h1>
+		<p>Click the button to get your coordinates.</p>
+		<button onclick="getLocation()">Try It</button>
+		<p id="location_demo"></p>
+		
+	<h1>SSE [Server Sent Events]</h1>
+		<h2>demo_sse.php</h2>
+		<textarea cols="150" rows="5">
+		 <?php
+header('Content-Type: text/event-stream');
+header('Cache-Control: no-cache');
+
+$time = date('r');
+echo "data: The server time is: {$time}\n\n";
+flush();
+?>
+
+		</textarea>
+		<h2>Result of the Server URL->demo_sse.php</h2> <div id="sse_result"></div>
+		<script>
+		if(typeof(EventSource) !== "undefined") {
+		    var source = new EventSource("demo_sse.php");
+		    source.onmessage = function(event) {
+		        document.getElementById("result").innerHTML += event.data + "<br>";
+		    };
+		} else {
+		    document.getElementById("sse_result").innerHTML = "Sorry, your browser does not support server-sent events...";
+		}
+		</script>
+</body>
+</html>
