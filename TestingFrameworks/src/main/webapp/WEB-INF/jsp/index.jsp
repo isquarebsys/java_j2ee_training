@@ -24,18 +24,25 @@
 	<div class="container">
 		<div class="w3-row-padding">
 			<div class="w3-third">
-				<h3>Spring Boot <font color="blue">Selenium</font></h3>
+				<h3>Selenium</h3>
+					<h2><font color="red">Pre-Requisites</h2></font>
+						<li>Run the SpringBoot class named TestingApplication.java</li>
+						
 					<li><a href="file:///D:\ws\git\java\TestingFrameworks\src\main\java\selenium\HelloWorld.java" target="_blank">Setup Selenium</a>
+					<li><a href="file:///D:\ws\git\java\TestingFrameworks\src\main\java\selenium\LoginButtonClick.java" target="_blank">Passing values to fields in a form</a>
+					<li><a href="file:///D:\ws\git\java\TestingFrameworks\src\main\java\selenium\LoginButtonClick.java" target="_blank">Clicking a submit button</a>
 			</div>
 	
 			<div class="w3-third">
-				<h3>JUnit [TBD]</h3>
-			         <li><a href="Employees.html" target="_blank">Angular consuming the employees from /api/employees</a></li>
+				<h3>JUnit</h3>
+			         <li><a href="file:///D:\ws\git\java\TestingFrameworks\src\main\java\junit\JUnitAnnotationsAll.java" target="_blank">Annotations like @Before,@BeforeClass,@After,@AfterClass</a>
+			         <li><a href="file:///D:\ws\git\java\TestingFrameworks\src\main\java\junit\JUnitParemeterised.java" target="_blank">Run a JUnit iteratively with Parameters</a>
+			         <li><a href="file:///D:\ws\git\java\TestingFrameworks\src\main\java\junit\JUnitTestMethods" target="_blank">assertEquals,assertTrue</a>
 			</div>
 
 			<div class="w3-third">
-				<h3>TestNG [TBD]</h3>
-					<li><a href="SpringAsRestConsumer.html" target="_blank">Spring As Rest Consumer</a>					
+				<h3>TestNG</h3>
+					<li><a href="file:///D:\ws\git\java\TestingFrameworks\src\main\java\testng\HelloWorldNGTest.java" target="_blank">assertEquals,assertTrue [Assert methods are similar to JUnit]</a>					
 			</div>
 		</div>	
 	</div>	

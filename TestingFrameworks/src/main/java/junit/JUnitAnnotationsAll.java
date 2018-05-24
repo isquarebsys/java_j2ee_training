@@ -1,6 +1,11 @@
-package selenium;
+package junit;
 
 import org.junit.Assert;
+import org.testng.annotations.Parameters;
+
+import java.util.Arrays;
+import java.util.Collection;
+
 import org.junit.*;
 
 /**
@@ -8,7 +13,7 @@ import org.junit.*;
  * @author user
  *
  */
-public class JUnitAnnotations {
+public class JUnitAnnotationsAll {
 	
 	/**
 	 * This method executes once before running all test. 
@@ -34,6 +39,16 @@ public class JUnitAnnotations {
 	public void junitTest() {
 		System.out.println("Running Junit test");
 		Assert.assertEquals(1, 1);
+	}
+	
+	@Parameters
+	public static Collection<Object[]> parameter(){
+	Object[][] pData=new Object[2][2];
+	pData[0][0]="Tom";
+	pData[0][1]=30;
+	pData[1][0]="Harry";
+	pData[1][1]=40;
+	return Arrays.asList(pData);
 	}
 	
 	/**
