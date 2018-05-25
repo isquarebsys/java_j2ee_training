@@ -1,17 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="47" started-at="2018-05-24T14:36:47Z" finished-at="2018-05-24T14:36:47Z">
+  <suite name="Default suite" duration-ms="45" started-at="2018-05-25T03:55:13Z" finished-at="2018-05-25T03:55:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="47" started-at="2018-05-24T14:36:47Z" finished-at="2018-05-24T14:36:47Z">
-      <class name="testng.HelloWorldNGTest">
-        <test-method status="PASS" signature="testEmailGenerator()[pri:0, instance:testng.HelloWorldNGTest@1e127982]" name="testEmailGenerator" duration-ms="15" started-at="2018-05-24T20:06:47Z" finished-at="2018-05-24T20:06:47Z">
+    <test name="Default test" duration-ms="45" started-at="2018-05-25T03:55:13Z" finished-at="2018-05-25T03:55:13Z">
+      <class name="testng.TestNGSuite1">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testng.TestNGSuite1@5383967b]" name="beforeSuite" is-config="true" duration-ms="12" started-at="2018-05-25T09:25:13Z" finished-at="2018-05-25T09:25:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testEmailGenerator -->
-      </class> <!-- testng.HelloWorldNGTest -->
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testng.TestNGSuite1@5383967b]" name="beforeTest" is-config="true" duration-ms="0" started-at="2018-05-25T09:25:13Z" finished-at="2018-05-25T09:25:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testng.TestNGSuite1@5383967b]" name="beforeClass" is-config="true" duration-ms="1" started-at="2018-05-25T09:25:13Z" finished-at="2018-05-25T09:25:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="f(java.lang.Integer, java.lang.String)[pri:0, instance:testng.TestNGSuite1@5383967b]" name="f" duration-ms="6" started-at="2018-05-25T09:25:13Z" data-provider="dp" finished-at="2018-05-25T09:25:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testng.TestNGSuite1@5383967b]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-05-25T09:25:13Z" finished-at="2018-05-25T09:25:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testng.TestNGSuite1@5383967b]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-05-25T09:25:13Z" finished-at="2018-05-25T09:25:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testng.TestNGSuite1@5383967b]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-05-25T09:25:13Z" finished-at="2018-05-25T09:25:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="f(java.lang.Integer, java.lang.String)[pri:0, instance:testng.TestNGSuite1@5383967b]" name="f" duration-ms="2" started-at="2018-05-25T09:25:13Z" data-provider="dp" finished-at="2018-05-25T09:25:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testng.TestNGSuite1@5383967b]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-05-25T09:25:13Z" finished-at="2018-05-25T09:25:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:testng.TestNGSuite1@5383967b]" name="afterClass" is-config="true" duration-ms="1" started-at="2018-05-25T09:25:13Z" finished-at="2018-05-25T09:25:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testng.TestNGSuite1@5383967b]" name="afterTest" is-config="true" duration-ms="1" started-at="2018-05-25T09:25:13Z" finished-at="2018-05-25T09:25:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testng.TestNGSuite1@5383967b]" name="afterSuite" is-config="true" duration-ms="0" started-at="2018-05-25T09:25:13Z" finished-at="2018-05-25T09:25:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- testng.TestNGSuite1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
