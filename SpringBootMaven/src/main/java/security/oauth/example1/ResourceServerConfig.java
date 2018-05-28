@@ -1,4 +1,4 @@
-package com.isquarebsys.oauth;
+package security.oauth.example1;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

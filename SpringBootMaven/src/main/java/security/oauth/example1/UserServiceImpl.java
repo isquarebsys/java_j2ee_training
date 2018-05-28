@@ -1,4 +1,4 @@
-package com.isquarebsys.oauth;
+package security.oauth.example1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
