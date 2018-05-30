@@ -1,3 +1,13 @@
+server:
+  port: 9443
+  ssl:
+    key-alias: sciresp1k
+    key-password: p1kscires
+# Place the jks under resources folder
+    key-store: classpath:scires.jks
+    key-store-provider: SUN
+    key-store-type: JKS
+
 security:
   oauth2:
     client:
