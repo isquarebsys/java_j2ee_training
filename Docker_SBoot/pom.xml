@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>docker.sboot</groupId>
+	<artifactId>docker.sboot</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>DockerSboot</name>
+	<description>Spring boot on docker</description>
+	<properties>
+		<docker.image.prefix>docker.springboot</docker.image.prefix>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<start-class>com.isquarebsys.DockerSBootApplication</start-class>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.8.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jersey</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>1.1.1</version>
+				<configuration>
+					<imageName>docker.image.prefix</imageName>
+					<dockerDirectory>docker</dockerDirectory>
+					<dockerHost>https://192.168.99.100:2376</dockerHost>
+					<!-- 
+[ERROR] Failed to execute goal com.spotify:docker-maven-plugin:1.1.1:build (defa
+ult-cli) on project docker.sboot: Exception caught: java.util.concurrent.Executi
+onException: com.spotify.docker.client.shaded.javax.ws.rs.ProcessingException: j
+avax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: P
+KIX path building failed: sun.security.provider.certpath.SunCertPathBuilderExcep
+tion: unable to find valid certification path to requested target ->					
+					 -->
+					<certPath>docker</certPath>
+					<repository>${docker.image.prefix}/${project.artifactId}</repository>
+					<buildArgs>
+						<JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+					</buildArgs>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
