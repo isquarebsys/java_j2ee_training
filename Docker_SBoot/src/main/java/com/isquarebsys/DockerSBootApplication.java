@@ -7,6 +7,23 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * 
+ * New instructions based on https://spring.io/guides/gs/spring-boot-docker/
+ * 
+ * STEPS
+ * 		1. Login to docker
+ * 		2. git clone https://github.com/isquarebsys/java_j2ee_training
+ * 		3. Navigate to the Docker_SBoot. This folder already has a Dockerfile
+ *		4. pom.xml is updated with dockerfile-maven-plugin which is a helper to create docker images
+ *		5. Build a tagged docker image: mvn install dockerfile:build
+ *		6. Run the image: docker run -p 8080:8080 -t docker.springboot/docker.sboot
+ *		7. Test the application@http://192.168.99.100:8080/ where 192.168.99.100 is the docker ip 
+ */
+
+
+/**
+ * OLD Instructions: Do NOT follow
+ * 
  * References
  * 	https://github.com/spotify/docker-maven-plugin
  * 	https://spring.io/guides/gs/spring-boot-docker/
