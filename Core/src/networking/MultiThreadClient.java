@@ -1,4 +1,4 @@
-package socket;
+package networking;
 
 import java.io.*;
 import java.net.*;
@@ -14,13 +14,14 @@ import java.net.*;
  * 
  * */
 
-public class SocketClient {
+public class MultiThreadClient {
 
 	public static void main(String[] args) {
 		try {
-			Socket s = new Socket("localhost", 6666);
+			Socket s = new Socket("localhost", 8888);
 			DataOutputStream dout = new DataOutputStream(s.getOutputStream());
-			dout.writeUTF("Hello Server");
+			dout.writeUTF("quit");
+			dout.writeUTF("\n"+"quit");
 			dout.flush();
 			dout.close();
 			s.close();
