@@ -25,12 +25,22 @@ public class VarargsTest1 {
     }
 	
 	public static void main(String[] args) {
-		numArray(100); // one parameter
-		numArray(1, 2, 3, 4); // four parameters
-		numArray(); // no parameter
-		
-		stringAndNumbers("Test",1);
-		stringAndNumbers("Test",1,2);
+//		numArray(100); // one parameter
+//		numArray(1, 2, 3, 4); // four parameters
+//		numArray(); // no parameter
+//		
+//		stringAndNumbers("Test",1);
+//		stringAndNumbers("Test",1,2);
+		calculateTotal(89,90,95);
+	}
+	
+	public static int calculateTotal(int... marks) {
+		int totalMarks=0;
+		for (int i : marks) {
+			totalMarks=totalMarks+i;
+		}
+		System.out.println(totalMarks);
+		return totalMarks;
 	}
 
 }
