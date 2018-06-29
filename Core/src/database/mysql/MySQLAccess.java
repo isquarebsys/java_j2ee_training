@@ -38,11 +38,11 @@ public class MySQLAccess {
 //            preparedStatement.setTimestamp(4, new java.sql.Timestamp(System.currentTimeMillis()));
 //            preparedStatement.executeUpdate();
             // Remove again the insert comment
-            preparedStatement = connection.prepareStatement("delete from test.user where username= ? and email=?;");
-            preparedStatement.setString(1, "Vijay");
-            preparedStatement.setString(2, "p6.vijayakumar@gmail.com");
-            preparedStatement.executeUpdate();
-            writeMetaData(resultSet);
+//            preparedStatement = connection.prepareStatement("delete from test.user where username= ? and email=?;");
+//            preparedStatement.setString(1, "Vijay");
+//            preparedStatement.setString(2, "p6.vijayakumar@gmail.com");
+//            preparedStatement.executeUpdate();
+//            writeMetaData(resultSet);
             writeResultSet(resultSet);
         } catch (Exception e) {
             throw e;
@@ -70,14 +70,14 @@ public class MySQLAccess {
             // also possible to get the columns via the column number
             // which starts at 1
             // e.g. resultSet.getSTring(2);
-            String user = resultSet.getString("username");
+            String user = resultSet.getString("id");
             String email = resultSet.getString("email");
-            String password = resultSet.getString("password");
-            Timestamp timestamp = resultSet.getTimestamp("create_time");
+            String password = resultSet.getString("name");
+//            Timestamp timestamp = resultSet.getTimestamp("create_time");
             System.out.println("User: " + user);
             System.out.println("Email: " + email);
-            System.out.println("Password: " + password);
-            System.out.println("Timestamp: " + timestamp);
+            System.out.println("Name: " + password);
+//            System.out.println("Timestamp: " + timestamp);
         }
     }
 

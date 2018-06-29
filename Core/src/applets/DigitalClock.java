@@ -44,6 +44,6 @@ public class DigitalClock extends Applet implements Runnable {
 
 	public void paint(Graphics g) {
 		g.setColor(Color.blue);
-		g.drawString(timeString, 50, 50);
+		g.drawString(timeString, 100, 100);
 	}
 }
