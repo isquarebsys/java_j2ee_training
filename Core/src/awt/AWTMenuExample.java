@@ -10,7 +10,7 @@ public class AWTMenuExample {
 	AWTMenuExample() {
 		Frame f = new Frame("Menu and MenuItem Example");
 		MenuBar mb = new MenuBar();
-		Menu menu = new Menu("Menu");
+		Menu menu = new Menu("Main Menu");
 		Menu submenu = new Menu("Sub Menu");
 		MenuItem i1 = new MenuItem("Item 1");
 		MenuItem i2 = new MenuItem("Item 2");

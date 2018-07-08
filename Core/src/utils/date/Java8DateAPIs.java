@@ -96,6 +96,9 @@ public class Java8DateAPIs {
 		LocalDateTime todayKolkata = LocalDateTime.now(ZoneId.of("Asia/Kolkata"));
 		System.out.println("Current Date in IST=" + todayKolkata);
 
+		LocalDateTime nowAtNewYork = LocalDateTime.now(ZoneId.of("America/New_York"));
+		System.out.println("Current Date in New York=" + nowAtNewYork);
+
 		// java.time.zone.ZoneRulesException: Unknown time-zone ID: IST
 		// LocalDateTime todayIST = LocalDateTime.now(ZoneId.of("IST"));
 

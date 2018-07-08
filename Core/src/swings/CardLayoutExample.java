@@ -13,7 +13,7 @@ import javax.swing.*;
  */
 public class CardLayoutExample extends JFrame implements ActionListener {
 	CardLayout card;
-	JButton b1, b2, b3;
+	JButton b1, b2, b3,b4;
 	Container c;
 
 	CardLayoutExample() {
@@ -26,6 +26,7 @@ public class CardLayoutExample extends JFrame implements ActionListener {
 		b1 = new JButton("Apple");
 		b2 = new JButton("Boy");
 		b3 = new JButton("Cat");
+		b4 = new JButton("Mouse");
 		b1.addActionListener(this);
 		b2.addActionListener(this);
 		b3.addActionListener(this);
@@ -33,6 +34,7 @@ public class CardLayoutExample extends JFrame implements ActionListener {
 		c.add("a", b1);
 		c.add("b", b2);
 		c.add("c", b3);
+		c.add("d", b4);
 
 	}
 

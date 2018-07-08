@@ -21,7 +21,7 @@ public class ProgressBarExample extends JFrame {
 			jb.setValue(i);
 			i = i + 20;
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(5000);
 			} catch (Exception e) {
 			}
 		}

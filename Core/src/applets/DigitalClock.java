@@ -36,7 +36,7 @@ public class DigitalClock extends Applet implements Runnable {
 				timeString = formatter.format(date);
 
 				repaint();
-				t.sleep(1000); // interval given in milliseconds
+				t.sleep(2000); // interval given in milliseconds
 			}
 		} catch (Exception e) {
 		}

@@ -31,7 +31,7 @@ public class VarargsTest1 {
 //		
 //		stringAndNumbers("Test",1);
 //		stringAndNumbers("Test",1,2);
-		calculateTotal(89,90,95);
+		calculateTotal(89,90,95,56,98);
 	}
 	
 	public static int calculateTotal(int... marks) {
