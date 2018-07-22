@@ -23,7 +23,7 @@ public class WeatherWSController
     	GetWeather weatherRequest=new GetWeather();
     	weatherRequest.setCityName("Chennai");
     	weatherRequest.setCountryName("India");
-    	GetWeatherResponse weatherResponse=(GetWeatherResponse)soapConnector.callWebService("http://localhost:8080/mockGlobalWeatherSoap", weatherRequest);
+    	GetWeatherResponse weatherResponse=(GetWeatherResponse)soapConnector.callWebService("http://vijay-e460:6060/mockGlobalWeatherSoap", weatherRequest);
     	System.out.println(weatherResponse.getGetWeatherResult());
     	return weatherResponse;
     }
