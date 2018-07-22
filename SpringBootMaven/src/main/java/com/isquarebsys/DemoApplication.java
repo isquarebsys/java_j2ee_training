@@ -16,7 +16,7 @@ import jersey.JerseyConfig;
 @EnableAutoConfiguration
 @Configuration
 @SpringBootApplication
-@ComponentScan("org.example.contract.doubleit")
+@ComponentScan("com.isquarebsys.ws.jaxb")
 public class DemoApplication {
 
 	public static void main(String[] args) {
